@@ -1,0 +1,12 @@
+:root {
+    --Primary: aliceblue;
+    --Highlights: #171e24;
+    --Secondary: #ffffff;
+    --Accents: #85c0ff;
+    --MainFont: "Monaco", sans-serif;
+  }
+
+body {
+    background-color: var(--Primary);
+    color: var(--Highlights);
+}
