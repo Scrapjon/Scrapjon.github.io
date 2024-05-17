@@ -1,8 +1,8 @@
 :root {
     --Primary: black;
-    --Highlights: red;
+    --Highlights: lightblue;
     --Secondary: #ffffff;
-    --Accents: darkred;
+    --Accents: blue;
     --MainFont: "Monaco", sans-serif;
   }
   body {
@@ -54,7 +54,7 @@
     border-color: var(--Highlights);
     background: var(--Primary);
     margin-inline: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../Images/yes.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(); /*No image yet*/
     background-size: cover;
     background-position: center;
     background-repeat: repeat-y;
