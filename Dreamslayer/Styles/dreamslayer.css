@@ -1,12 +1,43 @@
-:root {
-    --Primary: aliceblue;
-    --Highlights: #171e24;
-    --Secondary: #ffffff;
-    --Accents: #85c0ff;
-    --MainFont: "Monaco", sans-serif;
-  }
-
 body {
-    background-color: var(--Primary);
-    color: var(--Highlights);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #007bff;
+}
+
+p {
+  line-height: 1.5;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
 }
