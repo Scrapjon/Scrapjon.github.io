@@ -54,7 +54,7 @@
     border-color: var(--Highlights);
     background: var(--Primary);
     margin-inline: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../Images/hookforahand.png); /*No image yet*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)); /*No image yet*/
     background-size: cover;
     background-position: center;
     background-repeat: repeat-y;
