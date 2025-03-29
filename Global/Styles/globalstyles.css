@@ -1,64 +1,99 @@
 body {
-    font-family: Arial, sans-serif;
+    background-color: #000;
+    font-family: 'Orbitron', sans-serif;
+    color: #d0a0ff;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
-header, footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-}
-
-h1 {
-    color: #fff;
+h1, h2 {
+    text-shadow: 0 0 8px #a64dff, 0 0 16px #8a2be2;
     text-align: center;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
 }
 
-main {
-    max-width: 800px;
+#introduction {
+    font-size: 2.5em;
+    color: #d0a0ff;
+    animation-delay: 1.5s;
+}
+
+#slogan {
+    font-size: 1.2em;
+    color: #e0c8ff;
+}
+
+#slogan:nth-of-type(1) {
+    animation-delay: 3s;
+}
+
+#slogan:nth-of-type(2) {
+    animation-delay: 4.5s;
+}
+
+#welcomecontainer {
+    padding: 50px 20px;
+    border: 2px solid #8a2be2;
+    border-radius: 10px;
+    background: linear-gradient(145deg, rgba(100, 0, 200, 0.2), rgba(0, 0, 0, 0.9));
+    max-width: 700px;
     margin: 0 auto;
-    padding: 20px;
+    box-shadow: 0 0 20px #8a2be2;
+    opacity: 0;
+    animation: flickerIn 1s ease-out 0.5s forwards;
 }
 
-p {
-    line-height: 1.5;
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
 }
 
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
+
+.crt-lines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+    z-index: 10;
+    animation: crtFlicker 0.5s infinite linear;
 }
 
-h2 {
-    color: whitesmoke;
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
 
-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+@keyframes crtFlicker {
+      0% {background-position-y: 0}
+      50% {background-position-y: 1px;}
+      100% {background-position-y: 0}
+}
+@keyframes flickerIn {
+    0% { opacity: 0; }
+    10% { opacity: 0.2; }
+    20% { opacity: 0.4; }
+    30% { opacity: 0.1; }
+    40% { opacity: 0.6; }
+    50% { opacity: 0.3; }
+    60% { opacity: 0.7; }
+    70% { opacity: 0.5; }
+    80% { opacity: 0.9; }
+    90% { opacity: 0.8; }
+    100% { opacity: 1; }
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-}
-
-#Oliver {
-    display: block;
-    margin: 0 auto;
-    width: 200px;
-    height: auto;
-}
-
-label {
-    display: block;
-    text-align: center;
-}
