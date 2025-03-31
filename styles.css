@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@font-face {
+    font-family: IMGONNAPUTACOMPUTERINMYHEAD;
+    src: url('https://assets.codepen.io/605876/Blender-Pro-Bold.otf');
+    font-display: swap;
+}
+
 body {
     background-color: #000;
     font-family: 'Orbitron', sans-serif;
     color: #d0a0ff;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 h1, h2 {
@@ -34,7 +45,7 @@ h1, h2 {
     animation-delay: 4.5s;
 }
 
-#welcomecontainer {
+#herocontainer {
     padding: 50px 20px;
     border: 2px solid #8a2be2;
     border-radius: 10px;
