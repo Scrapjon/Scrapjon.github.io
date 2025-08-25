@@ -1,0 +1,30 @@
+name: Build static pages
+
+on:
+  push:
+    branches:
+      - Overhaul
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+            node-version: 22
+            cache: 'npm'
+            cache-dependency-path: source_code/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: mv source_code/dist/* ./
+
+      - name: Run build_pages
+        run: source_code/build_pages.py
+    
