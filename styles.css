@@ -6,10 +6,19 @@
     font-display: swap;
 }
 
+:root {
+    --bg-colour: #000;
+    --primary-colour: #d0a0ff;
+    --secondary-colour: #e0c8ff;
+    --accent-1: #8a2be2;
+    --accent-2: #a64dff;
+    --font: 'Orbitron', sans-serif;
+}
+
 body {
-    background-color: #000;
-    font-family: 'Orbitron', sans-serif;
-    color: #d0a0ff;
+    background-color: var(--bg-colour);
+    font-family: var(--font);
+    color: var(--primary-colour);
     margin: 0;
     padding: 0;
 }
@@ -19,7 +28,7 @@ body {
 }
 
 h1, h2 {
-    text-shadow: 0 0 8px #a64dff, 0 0 16px #8a2be2;
+    text-shadow: 0 0 8px var(--accent-2), 0 0 16px var(--accent-1);
     text-align: center;
     margin: 20px 0;
     opacity: 0;
@@ -28,13 +37,13 @@ h1, h2 {
 
 #introduction {
     font-size: 2.5em;
-    color: #d0a0ff;
+    color: var(--primary-colour);
     animation-delay: 1.5s;
 }
 
 #slogan {
     font-size: 1.2em;
-    color: #e0c8ff;
+    color: var(--secondary-colour);
 }
 
 #slogan:nth-of-type(1) {
@@ -47,12 +56,12 @@ h1, h2 {
 
 #herocontainer {
     padding: 50px 20px;
-    border: 2px solid #8a2be2;
+    border: 2px solid var(--accent-1);
     border-radius: 10px;
     background: linear-gradient(145deg, rgba(100, 0, 200, 0.2), rgba(0, 0, 0, 0.9));
     max-width: 700px;
     margin: 0 auto;
-    box-shadow: 0 0 20px #8a2be2;
+    box-shadow: 0 0 20px var(--accent-1);
     opacity: 0;
     animation: flickerIn 1s ease-out 0.5s forwards;
 }
@@ -82,7 +91,7 @@ h1, h2 {
     );
     pointer-events: none;
     z-index: 10;
-    animation: crtFlicker 0.5s infinite linear;
+    /*animation: crtFlicker 10s infinite linear;*/
 }
 
 @keyframes fadeIn {

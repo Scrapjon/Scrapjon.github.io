@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+@font-face {
+    font-family: IMGONNAPUTACOMPUTERINMYHEAD;
+    src: url('https://assets.codepen.io/605876/Blender-Pro-Bold.otf');
+    font-display: swap;
+}
+
+:root {
+    --bg-colour: #000;
+    --primary-colour: #d0a0ff;
+    --secondary-colour: #e0c8ff;
+    --accent-1: #8a2be2;
+    --accent-2: #a64dff;
+    --font: 'Orbitron', sans-serif;
+
+}
+
+body {
+    background-color: var(--bg-colour);
+    font-family: var(--font);
+    color: var(--primary-colour);
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 840) {
+    .flex-grid {
+        display: block;
+    }
+    .col {
+        flex: 1;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    top:0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(100, 0, 200, 0.2), rgba(0, 0, 0, 0.9));
+}
+ul li {
+    float: left;
+}
+
+ul li a {
+    display: block;
+    color: var(--accent-1);
+    text-align: center;
+    padding: 0.5vw 1.5vh;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    background-color: var(--accent-2);
+    color: #000
+}
+
+.text-container {
+    justify-self: center;
+    justify-content: center;
+    padding-left: 25vw;
+    padding-right: 25vw;
+}
+
+.crt-lines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1000;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.03),
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+    z-index: 10;
+    /*animation: crtFlicker 10s infinite linear;*/
+}
