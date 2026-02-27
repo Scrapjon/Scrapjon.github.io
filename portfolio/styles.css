@@ -7,75 +7,184 @@
 }
 
 :root {
-    --bg-colour: #000;
+    --bg-colour: #000000;
     --primary-colour: #d0a0ff;
     --secondary-colour: #e0c8ff;
     --accent-1: #8a2be2;
     --accent-2: #a64dff;
-    --font: 'Orbitron', sans-serif;
 
+    --glass-bg: rgba(40, 0, 70, 0.25);
+    --border-glow: rgba(166, 77, 255, 0.6);
+
+    --font: 'Orbitron', sans-serif;
+}
+
+/* Base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: var(--bg-colour);
     font-family: var(--font);
     color: var(--primary-colour);
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-@media (min-width: 840) {
-    .flex-grid {
-        display: block;
-    }
-    .col {
-        flex: 1;
-    }
+/* Glowy purple background thing */
+body::after {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 1200px;
+    height: 1200px;
+    background: radial-gradient(circle, rgba(138,43,226,0.15) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
 }
+
+/* Navigation */
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     position: sticky;
-    top:0;
+    top: 0;
     width: 100%;
-    overflow: hidden;
     display: flex;
     justify-content: center;
-    background: linear-gradient(180deg, rgba(100, 0, 200, 0.2), rgba(0, 0, 0, 0.9));
-}
-ul li {
-    float: left;
+    background: linear-gradient(
+        180deg,
+        rgba(100, 0, 200, 0.35),
+        rgba(0, 0, 0, 0.95)
+    );
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--accent-1);
+    z-index: 1000;
 }
 
 ul li a {
     display: block;
     color: var(--accent-1);
-    text-align: center;
-    padding: 0.5vw 1.5vh;
+    padding: 1rem 2rem;
     text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0.6rem;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: var(--accent-2);
+    transition: all 0.25s ease;
+    transform: translateX(-50%);
 }
 
 ul li a:hover {
-    background-color: var(--accent-2);
-    color: #000
+    color: #ffffff;
+    text-shadow: 0 0 8px var(--accent-2);
+}
+
+ul li a:hover::after {
+    width: 60%;
+}
+
+/* Sections */
+
+section {
+    padding: 8rem 0;
+    position: relative;
 }
 
 .text-container {
-    justify-self: center;
-    justify-content: center;
-    padding-left: 25vw;
-    padding-right: 25vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: var(--glass-bg);
+    border: 1px solid rgba(166, 77, 255, 0.3);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 0 15px rgba(138, 43, 226, 0.15),
+        0 0 40px rgba(138, 43, 226, 0.08);
 }
+
+/* Typography */
+
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: 4px;
+    color: var(--secondary-colour);
+    text-shadow: 0 0 12px var(--accent-2);
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    color: var(--accent-2);
+}
+
+p {
+    margin-bottom: 1.2rem;
+    color: var(--primary-colour);
+    font-size: 0.95rem;
+}
+
+strong {
+    color: #ffffff;
+    text-shadow: 0 0 6px var(--accent-1);
+}
+
+ul:not(nav ul) {
+    margin-top: 1rem;
+}
+
+ul:not(nav ul) li {
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+ul:not(nav ul) li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--accent-2);
+}
+
+/* Links */
+
+a {
+    color: var(--accent-2);
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 6px var(--accent-2);
+}
+
+/* CRT Overlay */
 
 .crt-lines::before {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1000;
+    position: fixed;
+    inset: 0;
     background: repeating-linear-gradient(
         to bottom,
         rgba(255, 255, 255, 0.03),
@@ -84,6 +193,30 @@ ul li a:hover {
         transparent 3px
     );
     pointer-events: none;
-    z-index: 10;
-    /*animation: crtFlicker 10s infinite linear;*/
+    z-index: 9999;
+}
+
+img {
+    width: 100%;
+    margin: 2rem 0;
+    border-radius: 8px;
+    border: 1px solid var(--accent-1);
+    box-shadow: 0 0 15px rgba(166, 77, 255, 0.4);
+}
+
+@media (max-width: 900px) {
+
+    .text-container {
+        margin: 0 1.5rem;
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    ul li a {
+        padding: 0.8rem 1rem;
+        font-size: 0.75rem;
+    }
 }
