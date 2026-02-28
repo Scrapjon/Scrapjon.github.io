@@ -51,7 +51,7 @@ body::after {
 
 /* Navigation */
 
-ul {
+nav ul {
     list-style-type: none;
     position: sticky;
     top: 0;
@@ -100,6 +100,13 @@ ul li a:hover::after {
     width: 60%;
 }
 
+#about {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 /* Sections */
 
 section {
@@ -143,6 +150,7 @@ p {
     margin-bottom: 1.2rem;
     color: var(--primary-colour);
     font-size: 0.95rem;
+    line-height: 3.0;
 }
 
 strong {
@@ -152,6 +160,8 @@ strong {
 
 ul:not(nav ul) {
     margin-top: 1rem;
+    list-style: none;
+    padding-left: 0;
 }
 
 ul:not(nav ul) li {
@@ -219,6 +229,8 @@ img {
         padding: 0.8rem 1rem;
         font-size: 0.75rem;
     }
+<<<<<<< Updated upstream
+=======
 }
 
 /* Slideshow */
@@ -308,4 +320,73 @@ img {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+/* Mobile Compatibility */
+
+@media (max-width: 768px) {
+
+    section {
+        padding: 4rem 0;
+    }
+
+    .text-container {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    /* Stack nav vertically if needed */
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.7rem;
+    }
+
+    /* Make slideshow arrows bigger tap targets */
+    .prev, .next {
+        padding: 20px;
+        font-size: 22px;
+    }
+
+    .dot {
+        height: 12px;
+        width: 12px;
+    }
+}
+
+/* Scroll Indicator */
+
+.scroll-indicator {
+    width: 30px;
+    height: 30px;
+    margin: 2rem auto 0 auto;
+    margin-top: 3rem;
+    border-left: 3px solid var(--accent-2);
+    border-bottom: 3px solid var(--accent-2);
+    transform: rotate(-45deg);
+    animation: scrollBounce 2s infinite;
+    opacity: 0.8;
+}
+
+@keyframes scrollBounce {
+    0% { transform: translateY(0) rotate(-45deg); opacity: 0.8; }
+    50% { transform: translateY(10px) rotate(-45deg); opacity: 1; }
+    100% { transform: translateY(0) rotate(-45deg); opacity: 0.8; }
+>>>>>>> Stashed changes
 }

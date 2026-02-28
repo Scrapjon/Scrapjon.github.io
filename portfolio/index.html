@@ -5,13 +5,14 @@
     <title>Oliver Moloney | Systems Programmer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="./portfolio.js"></script>
+    <script src="portfolio.js"></script>
 </head>
 
 <body>
 
 <nav>
     <ul class="flex-grid">
+        <li class="col"><a href="../">Home</a></li>
         <li class="col"><a href="#about">About</a></li>
         <li class="col"><a href="#dreamslayer">Dreamslayer</a></li>
         <li class="col"><a href="#inovia">Architecture</a></li>
@@ -24,6 +25,7 @@
 <section id="about">
     <div class="text-container">
         <h1>About Me</h1>
+        
 
         <p>
             I'm a Gameplay & AI Systems Programmer specialising in
@@ -52,51 +54,13 @@
             <li>System Architecture & Modular Design</li>
         </ul>
     </div>
+    <div class="scroll-indicator"></div>
 </section>
 
 <!-- DREAMSLAYER -->
 <section id="dreamslayer">
     <div class="text-container">
         <h1>Dreamslayer</h1>
-
-        <div class="slideshow-container">
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
-            <img src="images/Dreamslayer/Dreamslayer1.jpg" style="width:100%">
-            <div class="text"></div>
-          </div>
-      
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
-            <img src="images/Dreamslayer/Dreamslayer2.jpg" style="width:100%">
-            <div class="text"></div>
-          </div>
-      
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
-            <img src="images/Dreamslayer/Dreamslayer3.jpg" style="width:100%">
-            <div class="text"></div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img src="images/Dreamslayer/Dreamslayer4.jpg" style="width:100%">
-            <div class="text"></div>
-          </div>
-      
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-          <span class="dot" onclick="currentSlide(4)"></span>
-        </div> 
 
         <p>
             A commercially released Unreal Engine 5 title.
@@ -125,6 +89,10 @@
             I also composed and integrated the game's soundtrack and
             dynamic sound systems within Unreal.
         </p>
+        
+        <h2>Gallery</h2>
+        <div id="dreamslayer-slideshow"></div>
+
         <p>
             <h2>STEAM CHARTS</h2>
             <iframe src="https://steamdb.info/embed/?appid=2670250" height="389" style="border:0;overflow:hidden;width:100%" loading="lazy"></iframe>
@@ -166,22 +134,39 @@
     <div class="text-container">
         <h1>The Ice Wall</h1>
 
-        <!-- IMAGE: Insert Ice Wall gameplay screenshot here -->
-
         <p>
-            A game made in Unreal Engine 5 for the <strong><a href="https://itch.io/jam/brackeys-15">Brackeys Game Jam 2026.1</a></strong>
+            A game made in Unreal Engine 5 for the <strong><a href="https://itch.io/jam/brackeys-15">Brackeys Game Jam 2026.1</a></strong> which set a time limit of one week for the game's development.<br>
+            The theme was "Strange Places".
         </p>
 
+        <div id="icewall-slideshow"></div>
+
+        <h2>My Role</h2>
+
         <p>
-            It had scope issues. Design flaws. Technical debt.
-            And I shipped it anyway.
+            My role was to develop the core systems that the game would use in a way which was well documented and intuitive for the level designers to work with.
+            The main system being the temperature system which would utilise volumes as 'rooms' to act as a way to allow heat to circulate through an area (and alert the monster).
+            This system was intertwined with the player as well as the player would freeze to death if they are unable to keep warm.
+        </p>
+                
+           
+        <p>
+            I also was in charge of the monster's AI which I utilised Behaviour Trees, Blueprints and C++ to allow the monster to 'stalk' the player by prioritising areas with higher temperatures in its wandering state.
+            This was a design choice on my part as the monster would follow residual temperatures the player leaves behind from previously used/currently active campfires.
+            I also set up a system where the rooms would broadcast to the monster via a dynamic multicast delegate which would inform the monster of the location of said room when it exceeded a specified temperature.
+            This would cause the monster to enter an 'Alert' state where it would roar sprint to that room, allowing for a way for the player to get caught if they are being reckless or as a method of luring the monster.
+        </p>
+        <p>I was also responsible for the soundtrack and sound effects.</p>
+
+        <p>
+            While there were hardships along the way, I decided to complete the project until the end of the Game Jam.<br>
+            Around the end of the Game Jam, we decided to lean into a more comedic tone.
         </p>
 
         <h2>What It Taught Me</h2>
         <ul>
-            <li>Why architecture decisions matter early</li>
-            <li>The cost of unmanaged scope</li>
-            <li>How technical debt compounds</li>
+            <li>Ensuring that the game's central concept is solidified early in development</li>
+            <li>The importance of clear communication</li>
             <li>Importance of modular C++ system design</li>
             <li>Finishing > abandoning</li>
         </ul>
@@ -207,7 +192,7 @@
         <!-- IMAGE: Insert screenshot of pinned repositories here -->
 
         <p>
-            My GitHub contains small projects that I've made (usually as a joke).
+            My GitHub mainly contains small humourous projects.
         </p>
 
         <p>
