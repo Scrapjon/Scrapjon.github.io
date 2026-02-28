@@ -5,6 +5,7 @@
     <title>Oliver Moloney | Systems Programmer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="./portfolio.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 <!-- ABOUT -->
 <section id="about">
     <div class="text-container">
-        <h1>I Build Stuff.</h1>
+        <h1>About Me</h1>
 
         <p>
             I'm a Gameplay & AI Systems Programmer specialising in
@@ -58,7 +59,44 @@
     <div class="text-container">
         <h1>Dreamslayer</h1>
 
-        <!-- IMAGE: Insert Dreamslayer gameplay screenshot here -->
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="images/Dreamslayer/Dreamslayer1.jpg" style="width:100%">
+            <div class="text"></div>
+          </div>
+      
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="images/Dreamslayer/Dreamslayer2.jpg" style="width:100%">
+            <div class="text"></div>
+          </div>
+      
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="images/Dreamslayer/Dreamslayer3.jpg" style="width:100%">
+            <div class="text"></div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">4 / 4</div>
+            <img src="images/Dreamslayer/Dreamslayer4.jpg" style="width:100%">
+            <div class="text"></div>
+          </div>
+      
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+        </div> 
 
         <p>
             A commercially released Unreal Engine 5 title.
@@ -88,7 +126,7 @@
             dynamic sound systems within Unreal.
         </p>
         <p>
-            <h2>STEAM CHARTS!!!</h2>
+            <h2>STEAM CHARTS</h2>
             <iframe src="https://steamdb.info/embed/?appid=2670250" height="389" style="border:0;overflow:hidden;width:100%" loading="lazy"></iframe>
         </p>
         <p>
