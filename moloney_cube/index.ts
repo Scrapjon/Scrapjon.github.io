@@ -188,8 +188,23 @@ function main(): void {
                 const a: Vector3 = VERTS[f[i]];
                 const b: Vector3 = VERTS[f[(i + 1) % f.length]];
                 line(
-                    projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(a, angle), deltaZ))),
-                    projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(b, angle), deltaZ)))
+
+                    projectToScreen(
+                        MoloneyMath.project(
+                            MoloneyMath.translateZ(
+                                rotationFunc(a, angle),
+                                deltaZ
+                            )
+                        )
+                    ),
+                    projectToScreen(
+                        MoloneyMath.project(
+                            MoloneyMath.translateZ(
+                                rotationFunc(b, angle),
+                                deltaZ
+                            )
+                        )
+                    )
                 );
 
             }
