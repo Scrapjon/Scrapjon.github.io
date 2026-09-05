@@ -11,13 +11,77 @@ type Vector3 = {
     z: number
 }
 
+const enum RotationAxis {
+    XY = 0,
+    XZ = 1,
+    YZ = 2
+}
+
+namespace MoloneyMath {
+    export function project({ x, y, z }: Vector3): Vector2 {
+        return {
+            x: x / z,
+            y: y / z,
+        };
+    }
+
+    export function translateZ({ x, y, z }: Vector3, deltaZ: number): Vector3 {
+        return { x: x, y: y, z: z + deltaZ };
+    }
+
+    export function getRotationFunc(rotationAxis: RotationAxis) {
+        switch (rotationAxis) {
+            case RotationAxis.XY:
+                return rotateXY;
+            case RotationAxis.XZ:
+                return rotateXZ;
+            case RotationAxis.YZ:
+                return rotateYZ;
+            default:
+                return rotateXZ; // best looking rotation imo
+        }
+    }
+
+    function rotateXY({ x, y, z }: Vector3, angle: number): Vector3 {
+        const c: number = Math.cos(angle);
+        const s: number = Math.sin(angle);
+        return {
+            x: x * c - z * s,
+            y: x * s + y * c,
+            z: z,
+        };
+    }
+
+    function rotateXZ({ x, y, z }: Vector3, angle: number): Vector3 {
+        const c: number = Math.cos(angle);
+        const s: number = Math.sin(angle);
+        return {
+            x: x * c - z * s,
+            y: y,
+            z: x * s + z * c,
+        };
+    }
+
+    function rotateYZ({ x, y, z }: Vector3, angle: number): Vector3 {
+        const c: number = Math.cos(angle);
+        const s: number = Math.sin(angle);
+        return {
+            x: x * c - z * s,
+            y: y,
+            z: x * s + z * c,
+        };
+    }
+}
+
 // Constants
 
 const BACKGROUND: string = "#101010"
 const FOREGROUND: string = "#50FF50"
 const FPS: number = 60;
+const CANVAS_SIZE: number = Math.min(window.innerWidth, window.innerHeight)
+const ZOOM_IN_SPEED: number = 1;
 
-const verts: Vector3[] = [
+const VERTS: Vector3[] = [
     { x: 0.25, y: 0.25, z: 0.25 },
     { x: -0.25, y: 0.25, z: 0.25 },
     { x: -0.25, y: -0.25, z: 0.25 },
@@ -29,7 +93,7 @@ const verts: Vector3[] = [
     { x: 0.25, y: -0.25, z: -0.25 },
 ];
 
-const faces: number[][] = [
+const FACES: number[][] = [
     [0, 1, 2, 3],
     [4, 5, 6, 7],
     [0, 4],
@@ -38,7 +102,13 @@ const faces: number[][] = [
     [3, 7]
 ]
 
-// I don't know typescript that well :(
+// Globals
+
+let deltaZ: number = 10;
+
+let angle: number = 0;
+
+let rotationAxis: RotationAxis = RotationAxis.XZ
 
 function main(): void {
 
@@ -52,11 +122,10 @@ function main(): void {
 
     const ctx: CanvasRenderingContext2D = moloney_cube.getContext("2d") as CanvasRenderingContext2D;
 
-    moloney_cube.width = Math.min(window.innerWidth, window.innerHeight);
-    moloney_cube.height = Math.min(window.innerWidth, window.innerHeight);
+    moloney_cube.width = CANVAS_SIZE;
+    moloney_cube.height = CANVAS_SIZE;
 
-    let dz: number = 1;
-    let angle: number = 0;
+    const rotationFunc = MoloneyMath.getRotationFunc(rotationAxis);
 
     function clearScreen(): void {
         ctx.fillStyle = BACKGROUND;
@@ -79,27 +148,6 @@ function main(): void {
         };
     }
 
-    function project({ x, y, z }: Vector3): Vector2 {
-        return {
-            x: x / z,
-            y: y / z,
-        };
-    }
-
-    function translateZ({ x, y, z }: Vector3, dz: number): Vector3 {
-        return { x: x, y: y, z: z + dz };
-    }
-
-    function rotateXZ({ x, y, z }: Vector3, angle: number): Vector3 {
-        const c: number = Math.cos(angle);
-        const s: number = Math.sin(angle);
-        return {
-            x: x * c - z * s,
-            y: y,
-            z: x * s + z * c,
-        };
-    }
-
     function line(p1: Vector2, p2: Vector2): void {
         ctx.lineWidth = 3;
         ctx.strokeStyle = FOREGROUND;
@@ -117,24 +165,31 @@ function main(): void {
     }
 
     function frame(): void {
+        const showVERTS: boolean = false;
+
         // Calculate delta time
-        const dt: number = 1 / FPS;
-        //dz += 1*dt;
-        angle += Math.PI * dt;
+        const deltaTime: number = 1 / FPS;
+
+        if (deltaZ > 1) {
+            deltaZ = deltaZ - Math.max(ZOOM_IN_SPEED * deltaTime, 1);
+        }
+
+        angle += Math.PI * deltaTime;
         // Draw cube to screen
         clearScreen();
 
-        for (const v of verts) {
-            //point(projectToScreen(project(translateZ(rotateXZ(v, angle), dz))));
+        for (const v of VERTS) {
+            if (showVERTS)
+                point(projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(v, angle), deltaZ))));
         }
 
-        for (const f of faces) {
+        for (const f of FACES) {
             for (let i = 0; i < f.length; ++i) {
-                const a: Vector3 = verts[f[i]];
-                const b: Vector3 = verts[f[(i + 1) % f.length]];
+                const a: Vector3 = VERTS[f[i]];
+                const b: Vector3 = VERTS[f[(i + 1) % f.length]];
                 line(
-                    projectToScreen(project(translateZ(rotateXZ(a, angle), dz))),
-                    projectToScreen(project(translateZ(rotateXZ(b, angle), dz)))
+                    projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(a, angle), deltaZ))),
+                    projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(b, angle), deltaZ)))
                 );
 
             }
