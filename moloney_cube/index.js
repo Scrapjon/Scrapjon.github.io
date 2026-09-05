@@ -58,7 +58,7 @@ const BACKGROUND = "#101010";
 const FOREGROUND = "#50FF50";
 const FPS = 60;
 const CANVAS_SIZE = Math.min(window.innerWidth, window.innerHeight);
-const ZOOM_IN_SPEED = 1;
+const ZOOM_IN_SPEED = 15;
 const VERTS = [
     { x: 0.25, y: 0.25, z: 0.25 },
     { x: -0.25, y: 0.25, z: 0.25 },
@@ -96,12 +96,6 @@ function main() {
         ctx.fillStyle = BACKGROUND;
         ctx.fillRect(0, 0, moloney_cube.width, moloney_cube.height);
     }
-    function point({ x, y }) {
-        console.log(x, y);
-        const s = 20;
-        ctx.fillStyle = FOREGROUND;
-        ctx.fillRect(x, y, s, s);
-    }
     // Convert 2d space to screen space: -1..1 => 0..width and height
     function projectToScreen(p) {
         return {
@@ -109,7 +103,13 @@ function main() {
             y: (1 - (p.y + 1) / 2) * Math.min(moloney_cube.width, moloney_cube.height),
         };
     }
-    function line(p1, p2) {
+    function drawPoint({ x, y }) {
+        console.log(x, y);
+        const s = 20;
+        ctx.fillStyle = FOREGROUND;
+        ctx.fillRect(x, y, s, s);
+    }
+    function drawLine(p1, p2) {
         ctx.lineWidth = 3;
         ctx.strokeStyle = FOREGROUND;
         ctx.beginPath();
@@ -124,24 +124,26 @@ function main() {
         ctx.textAlign = "center";
     }
     function frame() {
-        const showVERTS = false;
+        const showVerts = false;
         // Calculate delta time
         const deltaTime = 1 / FPS;
         if (deltaZ > 1) {
-            deltaZ = deltaZ - Math.max(ZOOM_IN_SPEED * deltaTime, 1);
+            deltaZ = Math.max(deltaZ - (ZOOM_IN_SPEED * deltaTime), 1);
         }
         angle += Math.PI * deltaTime;
         // Draw cube to screen
         clearScreen();
         for (const v of VERTS) {
-            if (showVERTS)
-                point(projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(v, angle), deltaZ))));
+            if (showVerts)
+                drawPoint(projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(v, angle), deltaZ))));
         }
         for (const f of FACES) {
             for (let i = 0; i < f.length; ++i) {
-                const a = VERTS[f[i]];
-                const b = VERTS[f[(i + 1) % f.length]];
-                line(projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(a, angle), deltaZ))), projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(b, angle), deltaZ))));
+                const line = {
+                    start: VERTS[f[i]],
+                    end: VERTS[f[(i + 1) % f.length]]
+                };
+                drawLine(projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(line.start, angle), deltaZ))), projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(line.end, angle), deltaZ))));
             }
         }
         // Write the title

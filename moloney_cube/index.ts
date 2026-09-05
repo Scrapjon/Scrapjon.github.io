@@ -11,6 +11,16 @@ type Vector3 = {
     z: number
 }
 
+type Line2d = {
+    start: Vector2,
+    end: Vector2
+}
+
+type Line3d = {
+    start: Vector3,
+    end: Vector3
+}
+
 const enum RotationAxis {
     XY = 0,
     XZ = 1,
@@ -79,7 +89,7 @@ const BACKGROUND: string = "#101010"
 const FOREGROUND: string = "#50FF50"
 const FPS: number = 60;
 const CANVAS_SIZE: number = Math.min(window.innerWidth, window.innerHeight)
-const ZOOM_IN_SPEED: number = 1;
+const ZOOM_IN_SPEED: number = 15;
 
 const VERTS: Vector3[] = [
     { x: 0.25, y: 0.25, z: 0.25 },
@@ -132,14 +142,6 @@ function main(): void {
         ctx.fillRect(0, 0, moloney_cube.width, moloney_cube.height);
     }
 
-
-    function point({ x, y }: Vector2): void {
-        console.log(x, y);
-        const s = 20;
-        ctx.fillStyle = FOREGROUND;
-        ctx.fillRect(x, y, s, s);
-    }
-
     // Convert 2d space to screen space: -1..1 => 0..width and height
     function projectToScreen(p: Vector2): Vector2 {
         return {
@@ -148,7 +150,14 @@ function main(): void {
         };
     }
 
-    function line(p1: Vector2, p2: Vector2): void {
+    function drawPoint({ x, y }: Vector2): void {
+        console.log(x, y);
+        const s = 20;
+        ctx.fillStyle = FOREGROUND;
+        ctx.fillRect(x, y, s, s);
+    }
+
+    function drawLine(p1: Vector2, p2: Vector2): void {
         ctx.lineWidth = 3;
         ctx.strokeStyle = FOREGROUND;
         ctx.beginPath();
@@ -165,34 +174,41 @@ function main(): void {
     }
 
     function frame(): void {
-        const showVERTS: boolean = false;
+
+        const showVerts: boolean = false;
 
         // Calculate delta time
         const deltaTime: number = 1 / FPS;
 
         if (deltaZ > 1) {
-            deltaZ = deltaZ - Math.max(ZOOM_IN_SPEED * deltaTime, 1);
+            deltaZ = Math.max(deltaZ - (ZOOM_IN_SPEED * deltaTime), 1);
         }
 
         angle += Math.PI * deltaTime;
+
+
         // Draw cube to screen
         clearScreen();
 
         for (const v of VERTS) {
-            if (showVERTS)
-                point(projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(v, angle), deltaZ))));
+            if (showVerts)
+                drawPoint(projectToScreen(MoloneyMath.project(MoloneyMath.translateZ(rotationFunc(v, angle), deltaZ))));
         }
 
         for (const f of FACES) {
             for (let i = 0; i < f.length; ++i) {
-                const a: Vector3 = VERTS[f[i]];
-                const b: Vector3 = VERTS[f[(i + 1) % f.length]];
-                line(
+
+                const line: Line3d = {
+                    start: VERTS[f[i]],
+                    end: VERTS[f[(i + 1) % f.length]]
+                }
+
+                drawLine(
 
                     projectToScreen(
                         MoloneyMath.project(
                             MoloneyMath.translateZ(
-                                rotationFunc(a, angle),
+                                rotationFunc(line.start, angle),
                                 deltaZ
                             )
                         )
@@ -200,7 +216,7 @@ function main(): void {
                     projectToScreen(
                         MoloneyMath.project(
                             MoloneyMath.translateZ(
-                                rotationFunc(b, angle),
+                                rotationFunc(line.end, angle),
                                 deltaZ
                             )
                         )
