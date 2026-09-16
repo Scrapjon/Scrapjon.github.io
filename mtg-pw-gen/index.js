@@ -5,7 +5,10 @@ const CHAR_REPLACEMENTS = {
     'e': ['3'],
     'o': ['0'],
     'i': ['1', '!'],
-    'b': ['8']
+    'b': ['8'],
+    'a': ['@'],
+    'g': ['6'], // this is pushing it
+    's': ['$', '5']
 };
 const SPECIAL_CHARS = ['!', '@', '#', '$', '%', '^', '&', '*', '?'];
 const DEFAULT_LENGTH = 12;
