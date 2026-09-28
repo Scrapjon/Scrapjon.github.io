@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjcnlm2u1x272"
-path="res://.godot/imported/space_orcs.apple-touch-icon.png-7b7452727342b34fcfad36cdc980f59f.ctex"
+uid="uid://di6btneggfe0n"
+path="res://.godot/imported/index.icon.png-6e1a8d22ebd97b68fa94e0777ed24c61.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://builds/space_orcs.apple-touch-icon.png"
-dest_files=["res://.godot/imported/space_orcs.apple-touch-icon.png-7b7452727342b34fcfad36cdc980f59f.ctex"]
+source_file="res://builds/index.icon.png"
+dest_files=["res://.godot/imported/index.icon.png-6e1a8d22ebd97b68fa94e0777ed24c61.ctex"]
 
 [params]
 
