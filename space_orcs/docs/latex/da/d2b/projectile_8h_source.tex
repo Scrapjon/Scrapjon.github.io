@@ -18,22 +18,22 @@
 \DoxyCodeLine{00014\ \ \ \ \ Node\ \ \ *m\_projectile\_owner\ =\ \textcolor{keyword}{nullptr};}
 \DoxyCodeLine{00015\ }
 \DoxyCodeLine{00016\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_projectile_a4ff14c58339e81385658ddab6b8cb012}{\_bind\_methods}}\ ();}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00020\ \ \ \ \ \doxymbox{\hyperlink{class_projectile_af8b4c110af08163aeca99610e3906311}{Projectile}}\ ()\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{class_projectile_a06a508046a780018a0d3c45e4278701b}{\string~Projectile}}\ ()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{inline}\ Vector2\ \doxymbox{\hyperlink{class_projectile_a57a6b4514745ed92eb5b86b5fef196c8}{get\_direction}}\ ()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \ \ \ \doxymbox{\hyperlink{class_projectile_af09d2fe3d4adb26b8451175d20840e7c}{set\_direction}}\ (\textcolor{keyword}{const}\ Vector2\ \&direction);}
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \ \ \doxymbox{\hyperlink{class_projectile_a888e1aa662de28b8cc38267d65f03a1b}{get\_speed}}\ ()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \ \ \ \doxymbox{\hyperlink{class_projectile_a18fd7eb773fb85df7376939af77aa486}{set\_speed}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ speed);}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{inline}\ Node\ \ \ *\doxymbox{\hyperlink{class_projectile_ae62eb934a790f990ea2b77a152f51b78}{get\_projectile\_owner}}\ ()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \ \ \ \doxymbox{\hyperlink{class_projectile_afc9c39c74a75dacaa2b46493894a1a93}{set\_projectile\_owner}}\ (Node\ *projectile\_owner);}
-\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \ \ \ \doxymbox{\hyperlink{class_projectile_a8302f4f7951c887b1236afa7835c3c95}{has\_projectile\_owner}}\ ()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ a\ quick\ way\ to\ null\ check\ projectile\ owner}}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_projectile_acf7b47f092bda02888ccbd6440ca83f4}{activate}}\ (Vector2\ position,\ Vector2\ direction,\ Node\ *projectile\_owner\ =\ \textcolor{keyword}{nullptr});\ \textcolor{comment}{//\ resorting\ to\ needing\ to\ manually\ activate\ the\ projectile...\ smh}}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_projectile_afa3988372f588cdebe6f47273cb95220}{\_process}}\ (\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_projectile_aea2f975db46147a76206a01bc0381020}{\_physics\_process}}\ (\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_projectile_aee40306486338894fdf9b51a6304876b}{\_ready}}\ ()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00033\ \};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_projectile_a4ff14c58339e81385658ddab6b8cb012}{\_bind\_methods}}\ ();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{class_projectile_af8b4c110af08163aeca99610e3906311}{Projectile}}\ ()\ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_projectile_a06a508046a780018a0d3c45e4278701b}{\string~Projectile}}\ ()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{inline}\ Vector2\ \doxymbox{\hyperlink{class_projectile_a57a6b4514745ed92eb5b86b5fef196c8}{get\_direction}}\ ()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \ \ \ \doxymbox{\hyperlink{class_projectile_af09d2fe3d4adb26b8451175d20840e7c}{set\_direction}}\ (\textcolor{keyword}{const}\ Vector2\ \&direction);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \ \ \doxymbox{\hyperlink{class_projectile_a888e1aa662de28b8cc38267d65f03a1b}{get\_speed}}\ ()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \ \ \ \doxymbox{\hyperlink{class_projectile_a18fd7eb773fb85df7376939af77aa486}{set\_speed}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ speed);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{inline}\ Node\ \ \ *\doxymbox{\hyperlink{class_projectile_ae62eb934a790f990ea2b77a152f51b78}{get\_projectile\_owner}}\ ()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \ \ \ \doxymbox{\hyperlink{class_projectile_afc9c39c74a75dacaa2b46493894a1a93}{set\_projectile\_owner}}\ (Node\ *projectile\_owner);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \ \ \ \doxymbox{\hyperlink{class_projectile_a8302f4f7951c887b1236afa7835c3c95}{has\_projectile\_owner}}\ ()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ a\ quick\ way\ to\ null\ check\ projectile\ owner}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_projectile_acf7b47f092bda02888ccbd6440ca83f4}{activate}}\ (Vector2\ position,\ Vector2\ direction,\ Node\ *projectile\_owner\ =\ \textcolor{keyword}{nullptr});\ \textcolor{comment}{//\ resorting\ to\ needing\ to\ manually\ activate\ the\ projectile...\ smh}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_projectile_afa3988372f588cdebe6f47273cb95220}{\_process}}\ (\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_projectile_aea2f975db46147a76206a01bc0381020}{\_physics\_process}}\ (\textcolor{keywordtype}{double}\ delta)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_projectile_aee40306486338894fdf9b51a6304876b}{\_ready}}\ ()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \};}
 
 \end{DoxyCode}

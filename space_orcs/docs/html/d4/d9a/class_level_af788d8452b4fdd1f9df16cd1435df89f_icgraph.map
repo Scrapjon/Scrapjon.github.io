@@ -1,9 +1,9 @@
 <map id="Level::get_projectile_manager" name="Level::get_projectile_manager">
 <area shape="rect" id="Node000001" title=" " alt="" coords="397,23,534,65"/>
-<area shape="rect" id="Node000002" href="$d4/d9a/class_level.html#abccc55e31a72970b178e6960b8fb6062" title=" " alt="" coords="201,5,349,32"/>
+<area shape="rect" id="Node000002" href="$d4/d9a/class_level.html#abccc55e31a72970b178e6960b8fb6062" title="Method for binding functions, properties and signals. &#160;Probably shouldn&#39;t be used for binding the pro..." alt="" coords="201,5,349,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="379,33,349,31,349,26,384,33"/>
 <area shape="rect" id="Node000003" href="$d7/ddd/class_character_base.html#a723694fc956344660bc883767fde2127" title="Spawns a projectile at the specified location." alt="" coords="201,56,349,83"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="384,55,349,62,349,57,379,55"/>
-<area shape="rect" id="Node000004" href="$d7/ddd/class_character_base.html#a522fcc6a1fb73ed04bcb8c7c09e88cff" title=" " alt="" coords="5,48,153,91"/>
+<area shape="rect" id="Node000004" href="$d7/ddd/class_character_base.html#a522fcc6a1fb73ed04bcb8c7c09e88cff" title="Method for binding functions, properties and signals. &#160;Probably shouldn&#39;t be used for binding the pro..." alt="" coords="5,48,153,91"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="183,70,153,72,153,67,188,69"/>
 </map>

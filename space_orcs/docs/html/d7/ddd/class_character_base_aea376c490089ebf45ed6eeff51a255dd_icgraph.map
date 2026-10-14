@@ -1,5 +1,5 @@
 <map id="CharacterBase::get_hits" name="CharacterBase::get_hits">
 <area shape="rect" id="Node000001" title="Gets the number of remaining hits a character has before it dies." alt="" coords="201,13,363,40"/>
-<area shape="rect" id="Node000002" href="$d7/ddd/class_character_base.html#a522fcc6a1fb73ed04bcb8c7c09e88cff" title=" " alt="" coords="5,5,153,48"/>
+<area shape="rect" id="Node000002" href="$d7/ddd/class_character_base.html#a522fcc6a1fb73ed04bcb8c7c09e88cff" title="Method for binding functions, properties and signals. &#160;Probably shouldn&#39;t be used for binding the pro..." alt="" coords="5,5,153,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,27,153,29,153,24,188,26"/>
 </map>

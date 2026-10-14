@@ -1,6 +1,6 @@
 <map id="CharacterBase::kill" name="CharacterBase::kill">
 <area shape="rect" id="Node000001" title="Sets character to &#39;dead&#39;, disables shooting and calls the &#39;character death&#39; signal...." alt="" coords="379,13,511,40"/>
-<area shape="rect" id="Node000002" href="$d7/ddd/class_character_base.html#a522fcc6a1fb73ed04bcb8c7c09e88cff" title=" " alt="" coords="5,5,153,48"/>
+<area shape="rect" id="Node000002" href="$d7/ddd/class_character_base.html#a522fcc6a1fb73ed04bcb8c7c09e88cff" title="Method for binding functions, properties and signals. &#160;Probably shouldn&#39;t be used for binding the pro..." alt="" coords="5,5,153,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="363,29,153,29,153,24,364,24"/>
 <area shape="rect" id="Node000003" href="$d7/ddd/class_character_base.html#a80891ca6fa81f2fece380765a13c7326" title="Sole method of dealing damage to characters. Decrements character&#39;s hits by 1." alt="" coords="201,39,331,65"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="366,38,332,45,331,40,361,38"/>

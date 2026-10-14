@@ -1,5 +1,5 @@
 <map id="CharacterBase::_bind_methods" name="CharacterBase::_bind_methods">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,532,153,575"/>
+<area shape="rect" id="Node000001" title="Method for binding functions, properties and signals. &#160;Probably shouldn&#39;t be used for binding the pro..." alt="" coords="5,532,153,575"/>
 <area shape="rect" id="Node000002" href="$d7/ddd/class_character_base.html#ad2fed49dcc335194d8295abbf35ce85d" title="Applys knockback in direction of the provided knockback direction." alt="" coords="454,15,602,58"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,532,91,429,113,282,129,207,148,140,172,85,185,64,199,49,225,31,255,18,285,10,317,5,381,4,441,13,437,15,381,9,318,10,286,15,256,23,228,36,202,53,189,68,176,88,153,141,134,209,118,283,96,429,85,533"/>
 <area shape="rect" id="Node000003" href="$d7/ddd/class_character_base.html#a643ab79de31c1d79cea733b3db57c3d7" title="Gets the can_shoot flag." alt="" coords="227,164,362,207"/>

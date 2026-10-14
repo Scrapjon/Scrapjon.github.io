@@ -1,7 +1,0 @@
-<map id="Level::start_level" name="Level::start_level">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,13,126,40"/>
-<area shape="rect" id="Node000002" href="$d4/d9a/class_level.html#a2df006a02d7f970971803e263bf347b8" title=" " alt="" coords="174,13,319,40"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,24,161,26,156,27,126,29"/>
-<area shape="rect" id="Node000003" href="$d7/ddd/class_character_base.html#ac3d29f75f6dbac8208c7dd743212df22" title=" " alt="" coords="367,5,501,48"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="319,24,354,27,349,27,319,29"/>
-</map>

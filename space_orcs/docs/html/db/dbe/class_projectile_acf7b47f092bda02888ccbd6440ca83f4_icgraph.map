@@ -1,6 +1,6 @@
 <map id="Projectile::activate" name="Projectile::activate">
 <area shape="rect" id="Node000001" title=" " alt="" coords="225,64,354,91"/>
-<area shape="rect" id="Node000002" href="$db/dbe/class_projectile.html#a4ff14c58339e81385658ddab6b8cb012" title=" " alt="" coords="5,5,177,32"/>
+<area shape="rect" id="Node000002" href="$db/dbe/class_projectile.html#a4ff14c58339e81385658ddab6b8cb012" title="Method for binding functions, properties and signals. &#160;Probably shouldn&#39;t be used for binding the pro..." alt="" coords="5,5,177,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="225,60,139,35,139,30,230,58"/>
 <area shape="rect" id="Node000003" href="$d2/de7/class_projectile_manager.html#a46a3f6c072be9108b51efeb85a701b6a" title=" " alt="" coords="24,56,158,99"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,78,159,80,158,75,212,77"/>

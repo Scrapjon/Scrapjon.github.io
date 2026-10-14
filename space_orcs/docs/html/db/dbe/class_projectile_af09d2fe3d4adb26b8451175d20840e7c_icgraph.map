@@ -1,6 +1,6 @@
 <map id="Projectile::set_direction" name="Projectile::set_direction">
 <area shape="rect" id="Node000001" title=" " alt="" coords="402,64,559,91"/>
-<area shape="rect" id="Node000002" href="$db/dbe/class_projectile.html#a4ff14c58339e81385658ddab6b8cb012" title=" " alt="" coords="5,5,177,32"/>
+<area shape="rect" id="Node000002" href="$db/dbe/class_projectile.html#a4ff14c58339e81385658ddab6b8cb012" title="Method for binding functions, properties and signals. &#160;Probably shouldn&#39;t be used for binding the pro..." alt="" coords="5,5,177,32"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="397,61,354,55,177,31,177,25,354,49,403,60"/>
 <area shape="rect" id="Node000003" href="$db/dbe/class_projectile.html#acf7b47f092bda02888ccbd6440ca83f4" title=" " alt="" coords="225,64,354,91"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="384,78,355,80,354,75,389,77"/>
