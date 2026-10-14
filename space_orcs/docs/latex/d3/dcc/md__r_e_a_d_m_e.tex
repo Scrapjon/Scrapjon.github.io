@@ -1,0 +1,66 @@
+\chapter{Space Orcs }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Space Orcs@{Space Orcs}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+{\itshape Uses godot-\/cpp template.}\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{godot-\/cpp template:}{godot-\/cpp template:}}\label{md__r_e_a_d_m_e_autotoc_md1}
+This repository serves as a quickstart template for GDExtension development with Godot 4.\+0+.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Contents}{Contents}}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Preconfigured source files for C++ development of the GDExtension (\href{./src/}{\texttt{src/}})
+\item An empty Godot project in \href{./project}{\texttt{project/}}, to test the GDExtension
+\item godot-\/cpp as a submodule ({\ttfamily godot-\/cpp/})
+\item Git\+Hub Issues template (\href{./.github/ISSUE_TEMPLATE.yml}{\texttt{.github/\+\+ISSUE\+\_\+\+TEMPLATE.\+yml}})
+\item Git\+Hub CI/\+\+CD workflows to publish your library packages when creating a release (\href{./.github/workflows/builds.yml}{\texttt{.github/\+workflows/\+builds.\+yml}})
+\item An SConstruct file with various functions, such as boilerplate for \href{https://docs.godotengine.org/en/stable/tutorials/scripting/cpp/gdextension_docs_system.html}{\texttt{Adding documentation}}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Usage -\/ Template}{Usage -\/ Template}}\label{md__r_e_a_d_m_e_autotoc_md3}
+To use this template, log in to Git\+Hub and click the green "{}\+Use this template"{} button at the top of the repository page. This will let you create a copy of this repository with a clean git history.
+
+To get started with your new GDExtension, do the following:
+
+
+\begin{DoxyItemize}
+\item clone your repository to your local computer
+\item initialize the godot-\/cpp git submodule via {\ttfamily git submodule update -\/-\/init}
+\item change the name of the compiled library file inside the \href{./SConstruct}{\texttt{SConstruct}} file by modifying the {\ttfamily libname} string.
+\begin{DoxyItemize}
+\item change the paths of the to be loaded library name inside the \href{./project/bin/example.gdextension}{\texttt{project/\+bin/\+example.\+gdextension}} file, by replacing {\ttfamily EXTENSION-\/\+NAME} with the name you chose for {\ttfamily libname}.
+\end{DoxyItemize}
+\item change the {\ttfamily entry\+\_\+symbol} string inside \href{./project/bin/example.gdextension}{\texttt{project/\+bin/\+example.\+gdextension}} file.
+\begin{DoxyItemize}
+\item rename the {\ttfamily example\+\_\+library\+\_\+init} function in \href{./src/register_types.cpp}{\texttt{src/\+register\+\_\+types.\+cpp}} to the same name you chose for {\ttfamily entry\+\_\+symbol}.
+\end{DoxyItemize}
+\item change the name of the {\ttfamily project/\+bin/\+example.\+gdextension} file
+\end{DoxyItemize}
+
+Now, you can build the project with the following command:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{scons}
+
+\end{DoxyCode}
+
+
+If the build command worked, you can test it with the \href{./project}{\texttt{project}} project. Import it into Godot, open it, and launch the main scene. You should see it print the following line in the console:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Type:\ 24}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{\texorpdfstring{Configuring an IDE}{Configuring an IDE}}\label{md__r_e_a_d_m_e_autotoc_md4}
+You can develop your own extension with any text editor and by invoking scons on the command line, but if you want to work with an IDE (Integrated Development Environment), you can use a compilation database file called {\ttfamily compile\+\_\+commands.\+json}. Most IDEs should automatically identify this file, and self-\/configure appropriately. To generate the database file, you can run one of the following commands in the project root directory: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Generate\ compile\_commands.json\ while\ compiling}
+\DoxyCodeLine{scons\ compiledb=yes}
+\DoxyCodeLine{}
+\DoxyCodeLine{\#\ Generate\ compile\_commands.json\ without\ compiling}
+\DoxyCodeLine{scons\ compiledb=yes\ compile\_commands.json}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Usage -\/ Actions}{Usage -\/ Actions}}\label{md__r_e_a_d_m_e_autotoc_md5}
+This repository comes with continuous integration (CI) through a Git\+Hub action that tests building the GDExtension. It triggers automatically for each pushed change. You can find and edit it in \href{.github/workflows/ci.yml}{\texttt{builds.\+yml}}.
+
+There is also a workflow (\href{.github/workflows/make_build.yml}{\texttt{make\+\_\+build.\+yml}}) that builds the GDExtension for all supported platforms that you can use to create releases. You can trigger this workflow manually from the {\ttfamily Actions} tab on Git\+Hub. After it is complete, you can find the file {\ttfamily godot-\/cpp-\/template.\+zip} in the {\ttfamily Artifacts} section of the workflow run. 

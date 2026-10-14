@@ -1,0 +1,4 @@
+var searchData=
+[
+  ['ide_0',['Configuring an IDE',['../d3/dcc/md__r_e_a_d_m_e.html#autotoc_md4',1,'']]]
+];

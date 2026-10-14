@@ -1,0 +1,256 @@
+\doxysection{Projectile Class Reference}
+\hypertarget{class_projectile}{}\label{class_projectile}\index{Projectile@{Projectile}}
+
+
+{\ttfamily \+\#include $<$projectile.\+h$>$}
+
+
+
+Inheritance diagram for Projectile:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{d1/d0c/class_projectile__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Projectile:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{d1/deb/class_projectile__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_projectile_af8b4c110af08163aeca99610e3906311}{Projectile}} ()=default
+\item 
+\doxymbox{\hyperlink{class_projectile_a06a508046a780018a0d3c45e4278701b}{\texorpdfstring{$\sim$}{\string~}\+Projectile}} () override=default
+\item 
+Vector2 \doxymbox{\hyperlink{class_projectile_a57a6b4514745ed92eb5b86b5fef196c8}{get\+\_\+direction}} () const
+\item 
+void \doxymbox{\hyperlink{class_projectile_af09d2fe3d4adb26b8451175d20840e7c}{set\+\_\+direction}} (const Vector2 \&direction)
+\item 
+float \doxymbox{\hyperlink{class_projectile_a888e1aa662de28b8cc38267d65f03a1b}{get\+\_\+speed}} () const
+\item 
+void \doxymbox{\hyperlink{class_projectile_a18fd7eb773fb85df7376939af77aa486}{set\+\_\+speed}} (const float speed)
+\item 
+Node \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_projectile_ae62eb934a790f990ea2b77a152f51b78}{get\+\_\+projectile\+\_\+owner}} () const
+\item 
+void \doxymbox{\hyperlink{class_projectile_afc9c39c74a75dacaa2b46493894a1a93}{set\+\_\+projectile\+\_\+owner}} (Node \texorpdfstring{$\ast$}{*}projectile\+\_\+owner)
+\item 
+bool \doxymbox{\hyperlink{class_projectile_a8302f4f7951c887b1236afa7835c3c95}{has\+\_\+projectile\+\_\+owner}} () const
+\item 
+void \doxymbox{\hyperlink{class_projectile_acf7b47f092bda02888ccbd6440ca83f4}{activate}} (Vector2 position, Vector2 direction, Node \texorpdfstring{$\ast$}{*}projectile\+\_\+owner=nullptr)
+\item 
+void \doxymbox{\hyperlink{class_projectile_afa3988372f588cdebe6f47273cb95220}{\+\_\+process}} (double delta) override
+\item 
+void \doxymbox{\hyperlink{class_projectile_aea2f975db46147a76206a01bc0381020}{\+\_\+physics\+\_\+process}} (double delta) override
+\item 
+void \doxymbox{\hyperlink{class_projectile_aee40306486338894fdf9b51a6304876b}{\+\_\+ready}} () override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_projectile_a4ff14c58339e81385658ddab6b8cb012}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+
+
+\label{class_projectile_doc-constructors}
+\Hypertarget{class_projectile_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_projectile_af8b4c110af08163aeca99610e3906311}\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\index{Projectile@{Projectile}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{Projectile()}{Projectile()}}
+{\footnotesize\ttfamily \label{class_projectile_af8b4c110af08163aeca99610e3906311} 
+Projectile::\+\+Projectile (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_projectile_a06a508046a780018a0d3c45e4278701b}\index{Projectile@{Projectile}!````~Projectile@{\texorpdfstring{$\sim$}{\string~}Projectile}}
+\index{````~Projectile@{\texorpdfstring{$\sim$}{\string~}Projectile}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Projectile()}{\string~Projectile()}}
+{\footnotesize\ttfamily \label{class_projectile_a06a508046a780018a0d3c45e4278701b} 
+Projectile::\+\texorpdfstring{$\sim$}{\string~}\+Projectile (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbe/class_projectile_a06a508046a780018a0d3c45e4278701b_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_projectile_doc-func-members}
+\Hypertarget{class_projectile_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_projectile_a4ff14c58339e81385658ddab6b8cb012}\index{Projectile@{Projectile}!\_bind\_methods@{\_bind\_methods}}
+\index{\_bind\_methods@{\_bind\_methods}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{\_bind\_methods()}{\_bind\_methods()}}
+{\footnotesize\ttfamily \label{class_projectile_a4ff14c58339e81385658ddab6b8cb012} 
+void Projectile::\+\+\_\+bind\+\_\+methods (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbe/class_projectile_a4ff14c58339e81385658ddab6b8cb012_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_aea2f975db46147a76206a01bc0381020}\index{Projectile@{Projectile}!\_physics\_process@{\_physics\_process}}
+\index{\_physics\_process@{\_physics\_process}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{\_physics\_process()}{\_physics\_process()}}
+{\footnotesize\ttfamily \label{class_projectile_aea2f975db46147a76206a01bc0381020} 
+void Projectile::\+\+\_\+physics\+\_\+process (\begin{DoxyParamCaption}\item[{double}]{delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{db/dbe/class_projectile_aea2f975db46147a76206a01bc0381020_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_afa3988372f588cdebe6f47273cb95220}\index{Projectile@{Projectile}!\_process@{\_process}}
+\index{\_process@{\_process}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{\_process()}{\_process()}}
+{\footnotesize\ttfamily \label{class_projectile_afa3988372f588cdebe6f47273cb95220} 
+void Projectile::\+\+\_\+process (\begin{DoxyParamCaption}\item[{double}]{delta}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{db/dbe/class_projectile_afa3988372f588cdebe6f47273cb95220_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_aee40306486338894fdf9b51a6304876b}\index{Projectile@{Projectile}!\_ready@{\_ready}}
+\index{\_ready@{\_ready}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{\_ready()}{\_ready()}}
+{\footnotesize\ttfamily \label{class_projectile_aee40306486338894fdf9b51a6304876b} 
+void Projectile::\+\+\_\+ready (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{db/dbe/class_projectile_aee40306486338894fdf9b51a6304876b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_acf7b47f092bda02888ccbd6440ca83f4}\index{Projectile@{Projectile}!activate@{activate}}
+\index{activate@{activate}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily \label{class_projectile_acf7b47f092bda02888ccbd6440ca83f4} 
+void Projectile::\+activate (\begin{DoxyParamCaption}\item[{Vector2}]{position}{, }\item[{Vector2}]{direction}{, }\item[{Node \texorpdfstring{$\ast$}{*}}]{projectile\+\_\+owner}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{db/dbe/class_projectile_acf7b47f092bda02888ccbd6440ca83f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{db/dbe/class_projectile_acf7b47f092bda02888ccbd6440ca83f4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_a57a6b4514745ed92eb5b86b5fef196c8}\index{Projectile@{Projectile}!get\_direction@{get\_direction}}
+\index{get\_direction@{get\_direction}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{get\_direction()}{get\_direction()}}
+{\footnotesize\ttfamily \label{class_projectile_a57a6b4514745ed92eb5b86b5fef196c8} 
+Vector2 Projectile::\+get\+\_\+direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbe/class_projectile_a57a6b4514745ed92eb5b86b5fef196c8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_ae62eb934a790f990ea2b77a152f51b78}\index{Projectile@{Projectile}!get\_projectile\_owner@{get\_projectile\_owner}}
+\index{get\_projectile\_owner@{get\_projectile\_owner}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{get\_projectile\_owner()}{get\_projectile\_owner()}}
+{\footnotesize\ttfamily \label{class_projectile_ae62eb934a790f990ea2b77a152f51b78} 
+Node \texorpdfstring{$\ast$}{*} Projectile::\+get\+\_\+projectile\+\_\+owner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbe/class_projectile_ae62eb934a790f990ea2b77a152f51b78_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_a888e1aa662de28b8cc38267d65f03a1b}\index{Projectile@{Projectile}!get\_speed@{get\_speed}}
+\index{get\_speed@{get\_speed}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{get\_speed()}{get\_speed()}}
+{\footnotesize\ttfamily \label{class_projectile_a888e1aa662de28b8cc38267d65f03a1b} 
+float Projectile::\+get\+\_\+speed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbe/class_projectile_a888e1aa662de28b8cc38267d65f03a1b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_a8302f4f7951c887b1236afa7835c3c95}\index{Projectile@{Projectile}!has\_projectile\_owner@{has\_projectile\_owner}}
+\index{has\_projectile\_owner@{has\_projectile\_owner}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{has\_projectile\_owner()}{has\_projectile\_owner()}}
+{\footnotesize\ttfamily \label{class_projectile_a8302f4f7951c887b1236afa7835c3c95} 
+bool Projectile::\+has\+\_\+projectile\+\_\+owner (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbe/class_projectile_a8302f4f7951c887b1236afa7835c3c95_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_af09d2fe3d4adb26b8451175d20840e7c}\index{Projectile@{Projectile}!set\_direction@{set\_direction}}
+\index{set\_direction@{set\_direction}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{set\_direction()}{set\_direction()}}
+{\footnotesize\ttfamily \label{class_projectile_af09d2fe3d4adb26b8451175d20840e7c} 
+void Projectile::\+set\+\_\+direction (\begin{DoxyParamCaption}\item[{const Vector2 \&}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbe/class_projectile_af09d2fe3d4adb26b8451175d20840e7c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_afc9c39c74a75dacaa2b46493894a1a93}\index{Projectile@{Projectile}!set\_projectile\_owner@{set\_projectile\_owner}}
+\index{set\_projectile\_owner@{set\_projectile\_owner}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{set\_projectile\_owner()}{set\_projectile\_owner()}}
+{\footnotesize\ttfamily \label{class_projectile_afc9c39c74a75dacaa2b46493894a1a93} 
+void Projectile::\+set\+\_\+projectile\+\_\+owner (\begin{DoxyParamCaption}\item[{Node \texorpdfstring{$\ast$}{*}}]{projectile\+\_\+owner}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbe/class_projectile_afc9c39c74a75dacaa2b46493894a1a93_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_projectile_a18fd7eb773fb85df7376939af77aa486}\index{Projectile@{Projectile}!set\_speed@{set\_speed}}
+\index{set\_speed@{set\_speed}!Projectile@{Projectile}}
+\doxysubsubsection{\texorpdfstring{set\_speed()}{set\_speed()}}
+{\footnotesize\ttfamily \label{class_projectile_a18fd7eb773fb85df7376939af77aa486} 
+void Projectile::\+set\+\_\+speed (\begin{DoxyParamCaption}\item[{const float}]{speed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/dbe/class_projectile_a18fd7eb773fb85df7376939af77aa486_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\+projectiles/\doxymbox{\hyperlink{projectile_8h}{projectile.\+h}}\item 
+src/\+projectiles/\doxymbox{\hyperlink{projectile_8cpp}{projectile.\+cpp}}\end{DoxyCompactItemize}

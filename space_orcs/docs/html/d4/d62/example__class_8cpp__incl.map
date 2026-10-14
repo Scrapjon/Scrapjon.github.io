@@ -1,0 +1,11 @@
+<map id="src/example_class.cpp" name="src/example_class.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="205,5,360,32"/>
+<area shape="rect" id="Node000002" href="$df/d07/example__class_8h.html" title=" " alt="" coords="223,80,342,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="284,30,285,66,280,63,281,35"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,155,155,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="254,106,147,151,145,146,248,108"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="178,163,387,189"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="285,105,285,149,280,146,281,109"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="410,163,603,189"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="318,105,460,157,455,158,317,110"/>
+</map>

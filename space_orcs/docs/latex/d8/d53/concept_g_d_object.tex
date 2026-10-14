@@ -1,0 +1,13 @@
+\doxysection{GDObject Concept Reference}
+\hypertarget{concept_g_d_object}{}\label{concept_g_d_object}\index{GDObject@{GDObject}}
+
+
+{\ttfamily \+\#include $<$concepts.\+h$>$}
+
+\doxysubsection{Concept definition}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{template}<\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{\textcolor{keyword}{concept\ }\doxymbox{\hyperlink{concept_g_d_object}{GDObject}}\ =\ std::is\_base\_of\_v<godot::Object,\ T>}
+
+\end{DoxyCode}

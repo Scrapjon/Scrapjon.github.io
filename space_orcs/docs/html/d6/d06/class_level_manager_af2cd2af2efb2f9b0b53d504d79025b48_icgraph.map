@@ -1,0 +1,16 @@
+<map id="LevelManager::get_active_level" name="LevelManager::get_active_level">
+<area shape="rect" id="Node000001" title=" " alt="" coords="397,105,567,148"/>
+<area shape="rect" id="Node000002" href="$de/d11/class_level_container.html#aabb428913ae91bc5f3dbcd71183771de" title=" " alt="" coords="208,5,342,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="423,98,348,62,325,51,325,46,350,58,428,98"/>
+<area shape="rect" id="Node000004" href="$d7/ddd/class_character_base.html#a05ab2133dc321ba0f5625df36d8b73ae" title="Gets the active level from the level manager." alt="" coords="208,72,342,115"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="379,111,342,107,342,101,384,110"/>
+<area shape="rect" id="Node000006" href="$d2/de7/class_projectile_manager.html#a9ca86b0f0d0688dd56ae5c0905df8ba1" title=" " alt="" coords="208,139,342,181"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="379,143,342,152,341,147,384,142"/>
+<area shape="rect" id="Node000007" href="$d7/ddd/class_character_base.html#a723694fc956344660bc883767fde2127" title="Spawns a projectile at the specified location." alt="" coords="201,205,349,232"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="430,155,350,196,320,207,319,202,348,191,425,156"/>
+<area shape="rect" id="Node000003" href="$de/d11/class_level_container.html#a36076ab65fafaf2efc08d5b4cc0fddb4" title=" " alt="" coords="5,5,153,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="189,28,154,29,152,24,194,25"/>
+<area shape="rect" id="Node000005" href="$d7/ddd/class_character_base.html#a522fcc6a1fb73ed04bcb8c7c09e88cff" title=" " alt="" coords="5,135,153,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="190,121,149,137,147,132,195,118"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="214,201,148,181,148,175,219,199"/>
+</map>

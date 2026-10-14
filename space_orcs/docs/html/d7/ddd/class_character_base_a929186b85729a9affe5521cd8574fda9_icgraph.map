@@ -1,0 +1,5 @@
+<map id="CharacterBase::set_hits" name="CharacterBase::set_hits">
+<area shape="rect" id="Node000001" title="Sets the characters hits. Clamped to max_hits." alt="" coords="201,13,363,40"/>
+<area shape="rect" id="Node000002" href="$d7/ddd/class_character_base.html#a522fcc6a1fb73ed04bcb8c7c09e88cff" title=" " alt="" coords="5,5,153,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,27,153,29,153,24,188,26"/>
+</map>

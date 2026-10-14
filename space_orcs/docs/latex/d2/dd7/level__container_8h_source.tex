@@ -1,0 +1,31 @@
+\doxysection{level\+\_\+container.\+h}
+\hypertarget{level__container_8h_source}{}\label{level__container_8h_source}\index{src/level/level\_container.h@{src/level/level\_container.h}}
+\doxymbox{\hyperlink{level__container_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/node2d.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{level_8h}{level/level.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{level__manager_8h}{level/level\_manager.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{using\ namespace\ }godot;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_level_container}{LevelContainer}}\ :\ \textcolor{keyword}{public}\ Node2D\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ GDCLASS\ (\doxymbox{\hyperlink{class_level_container}{LevelContainer}},\ Node2D);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_level_container_a36076ab65fafaf2efc08d5b4cc0fddb4}{\_bind\_methods}}\ ();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \doxymbox{\hyperlink{class_level}{Level}}\ *\doxymbox{\hyperlink{class_level_container_aabb428913ae91bc5f3dbcd71183771de}{get\_active\_level}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_level_manager_a3dfb09fea60076707874b4237002026d}{LevelManager::get\_instance}}\ ().\doxymbox{\hyperlink{class_level_manager_af2cd2af2efb2f9b0b53d504d79025b48}{get\_active\_level}}\ ();}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_level_container_aa69a920541ece2b4ea5157df3a044911}{set\_active\_level}}\ (\doxymbox{\hyperlink{class_level}{Level}}\ *level)}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_level_manager_a3dfb09fea60076707874b4237002026d}{LevelManager::get\_instance}}\ ().\doxymbox{\hyperlink{class_level_manager_aadb4fdb85b4db6d84cca36157e730b2b}{set\_active\_level}}\ (level);}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

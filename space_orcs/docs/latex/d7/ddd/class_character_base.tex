@@ -1,0 +1,553 @@
+\doxysection{Character\+Base Class Reference}
+\hypertarget{class_character_base}{}\label{class_character_base}\index{CharacterBase@{CharacterBase}}
+
+
+The base character class for Space Orcs.  
+
+
+
+
+{\ttfamily \+\#include $<$character\+\_\+base.\+h$>$}
+
+
+
+Inheritance diagram for Character\+Base:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{d4/dbc/class_character_base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Character\+Base:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{dd/d16/class_character_base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_character_base_ac52af616beade0e3553a8ea54bdefb58}{Character\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em Default Constructor (obviously). \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_character_base_acc818ac7acb04ea7bf62421006f193bb}{\texorpdfstring{$\sim$}{\string~}\+Character\+Base}} ()=default
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\item 
+Vector2 \doxymbox{\hyperlink{class_character_base_a5c566524dbb5850104c3d65cec426176}{get\+\_\+direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the direction that the character is facing. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_character_base_a77b7f326d58af4848871e19548292f8f}{set\+\_\+direction}} (const Vector2 \&direction)
+\begin{DoxyCompactList}\small\item\em Sets the direction of the character. Updates the shoot direction cache as well. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_character_base_a643ab79de31c1d79cea733b3db57c3d7}{get\+\_\+can\+\_\+shoot}} () const
+\begin{DoxyCompactList}\small\item\em Gets the {\ttfamily can\+\_\+shoot} flag. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_character_base_a93e7fab7d95e7e160f12a6ea196513c3}{set\+\_\+can\+\_\+shoot}} (const bool can\+\_\+shoot)
+\begin{DoxyCompactList}\small\item\em Sets the character\textquotesingle{}s {\ttfamily can\+\_\+shoot} flag. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_character_base_a723694fc956344660bc883767fde2127}{shoot}} (Vector2 position, Vector2 direction, Packed\+Scene \texorpdfstring{$\ast$}{*}projectile\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Spawns a projectile at the specified location. \end{DoxyCompactList}\item 
+Vector2 \doxymbox{\hyperlink{class_character_base_acd63b99023b5d71520f8614b0a8513f0}{get\+\_\+shoot\+\_\+direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the shooting direction for the character. Uses a cached direction value so that the character shoots where it was last facing. \end{DoxyCompactList}\item 
+int8\+\_\+t \doxymbox{\hyperlink{class_character_base_aea376c490089ebf45ed6eeff51a255dd}{get\+\_\+hits}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of remaining hits a character has before it dies. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_character_base_a929186b85729a9affe5521cd8574fda9}{set\+\_\+hits}} (int8\+\_\+t hits)
+\begin{DoxyCompactList}\small\item\em Sets the characters hits. Clamped to {\ttfamily max\+\_\+hits}. \end{DoxyCompactList}\item 
+int8\+\_\+t \doxymbox{\hyperlink{class_character_base_ae9d3beb11b6c06ca6db6c1b7b809c4d6}{get\+\_\+max\+\_\+hits}} () const
+\begin{DoxyCompactList}\small\item\em Gets the maximum number of hits the character can take before it dies. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_character_base_a6016eb0cd8f8bc67652e102bc2793f8f}{set\+\_\+max\+\_\+hits}} (int8\+\_\+t max\+\_\+hits)
+\begin{DoxyCompactList}\small\item\em Sets the maximum number of hits the character can take before it dies. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_character_base_acff0812bf8abccf510b510aed7e4eb51}{is\+\_\+invincible}} () const
+\begin{DoxyCompactList}\small\item\em Get character\textquotesingle{}s invincibility flag. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_character_base_a1b3540ec283cd09357da45e75cd7234b}{set\+\_\+invincibility}} (bool invincible)
+\begin{DoxyCompactList}\small\item\em Set character\textquotesingle{}s invincibility flag. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_character_base_a3a80f7f9ce1456f99bf541b57015b2c2}{get\+\_\+knockback\+\_\+factor}} () const
+\begin{DoxyCompactList}\small\item\em Get character\textquotesingle{}s knockback factor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_character_base_a545a33a204214215778708845b4e1356}{set\+\_\+knockback\+\_\+factor}} (float knockback\+\_\+factor)
+\begin{DoxyCompactList}\small\item\em Get character\textquotesingle{}s knockback factor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_character_base_ad2fed49dcc335194d8295abbf35ce85d}{apply\+\_\+knockback}} (Vector2 knockback\+\_\+direction)
+\begin{DoxyCompactList}\small\item\em Applys knockback in direction of the provided knockback direction. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_character_base_a80891ca6fa81f2fece380765a13c7326}{hit}} (Vector2 global\+\_\+hit\+\_\+position)
+\begin{DoxyCompactList}\small\item\em Sole method of dealing damage to characters. Decrements character\textquotesingle{}s hits by 1. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_character_base_afa876bb8c666f546eab3d8e15f061c1e}{kill}} ()
+\begin{DoxyCompactList}\small\item\em Sets character to \textquotesingle{}dead\textquotesingle{}, disables shooting and calls the \textquotesingle{}character death\textquotesingle{} signal. It is up to the individual character to implement what happens on death. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_character_base_abb404fe758a1bf7b5ee2c208ffd1edb2}{is\+\_\+alive}} () const
+\begin{DoxyCompactList}\small\item\em Is character alive? \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_level}{Level}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_character_base_a05ab2133dc321ba0f5625df36d8b73ae}{get\+\_\+level}} () const
+\begin{DoxyCompactList}\small\item\em Gets the active level from the level manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \doxymbox{\hyperlink{class_character_base_a522fcc6a1fb73ed04bcb8c7c09e88cff}{\+\_\+bind\+\_\+methods}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The base character class for Space Orcs. 
+
+\label{class_character_base_doc-constructors}
+\Hypertarget{class_character_base_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_character_base_ac52af616beade0e3553a8ea54bdefb58}\index{CharacterBase@{CharacterBase}!CharacterBase@{CharacterBase}}
+\index{CharacterBase@{CharacterBase}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{CharacterBase()}{CharacterBase()}}
+{\footnotesize\ttfamily \label{class_character_base_ac52af616beade0e3553a8ea54bdefb58} 
+Character\+Base::\+\+Character\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default Constructor (obviously). 
+
+\Hypertarget{class_character_base_acc818ac7acb04ea7bf62421006f193bb}\index{CharacterBase@{CharacterBase}!````~CharacterBase@{\texorpdfstring{$\sim$}{\string~}CharacterBase}}
+\index{````~CharacterBase@{\texorpdfstring{$\sim$}{\string~}CharacterBase}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CharacterBase()}{\string~CharacterBase()}}
+{\footnotesize\ttfamily \label{class_character_base_acc818ac7acb04ea7bf62421006f193bb} 
+Character\+Base::\+\texorpdfstring{$\sim$}{\string~}\+Character\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Default Destructor. 
+
+
+
+\label{class_character_base_doc-func-members}
+\Hypertarget{class_character_base_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_character_base_a522fcc6a1fb73ed04bcb8c7c09e88cff}\index{CharacterBase@{CharacterBase}!\_bind\_methods@{\_bind\_methods}}
+\index{\_bind\_methods@{\_bind\_methods}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{\_bind\_methods()}{\_bind\_methods()}}
+{\footnotesize\ttfamily \label{class_character_base_a522fcc6a1fb73ed04bcb8c7c09e88cff} 
+void Character\+Base::\+\+\_\+bind\+\_\+methods (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/ddd/class_character_base_a522fcc6a1fb73ed04bcb8c7c09e88cff_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_ad2fed49dcc335194d8295abbf35ce85d}\index{CharacterBase@{CharacterBase}!apply\_knockback@{apply\_knockback}}
+\index{apply\_knockback@{apply\_knockback}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{apply\_knockback()}{apply\_knockback()}}
+{\footnotesize\ttfamily \label{class_character_base_ad2fed49dcc335194d8295abbf35ce85d} 
+void Character\+Base::\+apply\+\_\+knockback (\begin{DoxyParamCaption}\item[{Vector2}]{knockback\+\_\+direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Applys knockback in direction of the provided knockback direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em knockback\+\_\+direction} & The direction for the character to be knocked back in (should be unit vector). \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/ddd/class_character_base_ad2fed49dcc335194d8295abbf35ce85d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a643ab79de31c1d79cea733b3db57c3d7}\index{CharacterBase@{CharacterBase}!get\_can\_shoot@{get\_can\_shoot}}
+\index{get\_can\_shoot@{get\_can\_shoot}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{get\_can\_shoot()}{get\_can\_shoot()}}
+{\footnotesize\ttfamily \label{class_character_base_a643ab79de31c1d79cea733b3db57c3d7} 
+bool Character\+Base::\+get\+\_\+can\+\_\+shoot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the {\ttfamily can\+\_\+shoot} flag. 
+
+\begin{DoxyReturn}{Returns}
+Whether or not the character is allowed to shoot. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_a643ab79de31c1d79cea733b3db57c3d7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a5c566524dbb5850104c3d65cec426176}\index{CharacterBase@{CharacterBase}!get\_direction@{get\_direction}}
+\index{get\_direction@{get\_direction}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{get\_direction()}{get\_direction()}}
+{\footnotesize\ttfamily \label{class_character_base_a5c566524dbb5850104c3d65cec426176} 
+Vector2 Character\+Base::\+get\+\_\+direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the direction that the character is facing. 
+
+\begin{DoxyReturn}{Returns}
+Returns the direction that the character is facing (duh!) 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_a5c566524dbb5850104c3d65cec426176_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_aea376c490089ebf45ed6eeff51a255dd}\index{CharacterBase@{CharacterBase}!get\_hits@{get\_hits}}
+\index{get\_hits@{get\_hits}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{get\_hits()}{get\_hits()}}
+{\footnotesize\ttfamily \label{class_character_base_aea376c490089ebf45ed6eeff51a255dd} 
+int8\+\_\+t Character\+Base::\+get\+\_\+hits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of remaining hits a character has before it dies. 
+
+\begin{DoxyReturn}{Returns}
+Character\textquotesingle{}s remaining hit count. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{d7/ddd/class_character_base_aea376c490089ebf45ed6eeff51a255dd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a3a80f7f9ce1456f99bf541b57015b2c2}\index{CharacterBase@{CharacterBase}!get\_knockback\_factor@{get\_knockback\_factor}}
+\index{get\_knockback\_factor@{get\_knockback\_factor}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{get\_knockback\_factor()}{get\_knockback\_factor()}}
+{\footnotesize\ttfamily \label{class_character_base_a3a80f7f9ce1456f99bf541b57015b2c2} 
+float Character\+Base::\+get\+\_\+knockback\+\_\+factor (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get character\textquotesingle{}s knockback factor. 
+
+\begin{DoxyReturn}{Returns}
+Character\textquotesingle{}s knockback factor 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_a3a80f7f9ce1456f99bf541b57015b2c2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a05ab2133dc321ba0f5625df36d8b73ae}\index{CharacterBase@{CharacterBase}!get\_level@{get\_level}}
+\index{get\_level@{get\_level}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{get\_level()}{get\_level()}}
+{\footnotesize\ttfamily \label{class_character_base_a05ab2133dc321ba0f5625df36d8b73ae} 
+\doxymbox{\hyperlink{class_level}{Level}} \texorpdfstring{$\ast$}{*} Character\+Base::\+get\+\_\+level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the active level from the level manager. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the current active level. 
+\end{DoxyReturn}
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/ddd/class_character_base_a05ab2133dc321ba0f5625df36d8b73ae_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_a05ab2133dc321ba0f5625df36d8b73ae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_ae9d3beb11b6c06ca6db6c1b7b809c4d6}\index{CharacterBase@{CharacterBase}!get\_max\_hits@{get\_max\_hits}}
+\index{get\_max\_hits@{get\_max\_hits}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{get\_max\_hits()}{get\_max\_hits()}}
+{\footnotesize\ttfamily \label{class_character_base_ae9d3beb11b6c06ca6db6c1b7b809c4d6} 
+int8\+\_\+t Character\+Base::\+get\+\_\+max\+\_\+hits (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the maximum number of hits the character can take before it dies. 
+
+\begin{DoxyReturn}{Returns}
+Character\textquotesingle{}s maximum hit count. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_ae9d3beb11b6c06ca6db6c1b7b809c4d6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_acd63b99023b5d71520f8614b0a8513f0}\index{CharacterBase@{CharacterBase}!get\_shoot\_direction@{get\_shoot\_direction}}
+\index{get\_shoot\_direction@{get\_shoot\_direction}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{get\_shoot\_direction()}{get\_shoot\_direction()}}
+{\footnotesize\ttfamily \label{class_character_base_acd63b99023b5d71520f8614b0a8513f0} 
+Vector2 Character\+Base::\+get\+\_\+shoot\+\_\+direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the shooting direction for the character. Uses a cached direction value so that the character shoots where it was last facing. 
+
+\begin{DoxyReturn}{Returns}
+The direction that the character should shoot in. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_acd63b99023b5d71520f8614b0a8513f0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a80891ca6fa81f2fece380765a13c7326}\index{CharacterBase@{CharacterBase}!hit@{hit}}
+\index{hit@{hit}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{hit()}{hit()}}
+{\footnotesize\ttfamily \label{class_character_base_a80891ca6fa81f2fece380765a13c7326} 
+void Character\+Base::\+hit (\begin{DoxyParamCaption}\item[{Vector2}]{global\+\_\+hit\+\_\+position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sole method of dealing damage to characters. Decrements character\textquotesingle{}s hits by 1. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em global\+\_\+hit\+\_\+position} & Location of the object that hit the character (used for knockback direction calculation). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{d7/ddd/class_character_base_a80891ca6fa81f2fece380765a13c7326_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{d7/ddd/class_character_base_a80891ca6fa81f2fece380765a13c7326_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_abb404fe758a1bf7b5ee2c208ffd1edb2}\index{CharacterBase@{CharacterBase}!is\_alive@{is\_alive}}
+\index{is\_alive@{is\_alive}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{is\_alive()}{is\_alive()}}
+{\footnotesize\ttfamily \label{class_character_base_abb404fe758a1bf7b5ee2c208ffd1edb2} 
+bool Character\+Base::\+is\+\_\+alive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Is character alive? 
+
+\begin{DoxyReturn}{Returns}
+Yeah are they? 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{d7/ddd/class_character_base_abb404fe758a1bf7b5ee2c208ffd1edb2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_acff0812bf8abccf510b510aed7e4eb51}\index{CharacterBase@{CharacterBase}!is\_invincible@{is\_invincible}}
+\index{is\_invincible@{is\_invincible}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{is\_invincible()}{is\_invincible()}}
+{\footnotesize\ttfamily \label{class_character_base_acff0812bf8abccf510b510aed7e4eb51} 
+bool Character\+Base::\+is\+\_\+invincible (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get character\textquotesingle{}s invincibility flag. 
+
+\begin{DoxyReturn}{Returns}
+Whether character is able to take damage. 
+\end{DoxyReturn}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/ddd/class_character_base_acff0812bf8abccf510b510aed7e4eb51_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_afa876bb8c666f546eab3d8e15f061c1e}\index{CharacterBase@{CharacterBase}!kill@{kill}}
+\index{kill@{kill}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{kill()}{kill()}}
+{\footnotesize\ttfamily \label{class_character_base_afa876bb8c666f546eab3d8e15f061c1e} 
+void Character\+Base::\+kill (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets character to \textquotesingle{}dead\textquotesingle{}, disables shooting and calls the \textquotesingle{}character death\textquotesingle{} signal. It is up to the individual character to implement what happens on death. 
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/ddd/class_character_base_afa876bb8c666f546eab3d8e15f061c1e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a93e7fab7d95e7e160f12a6ea196513c3}\index{CharacterBase@{CharacterBase}!set\_can\_shoot@{set\_can\_shoot}}
+\index{set\_can\_shoot@{set\_can\_shoot}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{set\_can\_shoot()}{set\_can\_shoot()}}
+{\footnotesize\ttfamily \label{class_character_base_a93e7fab7d95e7e160f12a6ea196513c3} 
+void Character\+Base::\+set\+\_\+can\+\_\+shoot (\begin{DoxyParamCaption}\item[{const bool}]{can\+\_\+shoot}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the character\textquotesingle{}s {\ttfamily can\+\_\+shoot} flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em can\+\_\+shoot} & new value for the flag. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_a93e7fab7d95e7e160f12a6ea196513c3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a77b7f326d58af4848871e19548292f8f}\index{CharacterBase@{CharacterBase}!set\_direction@{set\_direction}}
+\index{set\_direction@{set\_direction}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{set\_direction()}{set\_direction()}}
+{\footnotesize\ttfamily \label{class_character_base_a77b7f326d58af4848871e19548292f8f} 
+void Character\+Base::\+set\+\_\+direction (\begin{DoxyParamCaption}\item[{const Vector2 \&}]{direction}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the direction of the character. Updates the shoot direction cache as well. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & new direction value. If x value is 0, the value is not cached. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_a77b7f326d58af4848871e19548292f8f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a929186b85729a9affe5521cd8574fda9}\index{CharacterBase@{CharacterBase}!set\_hits@{set\_hits}}
+\index{set\_hits@{set\_hits}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{set\_hits()}{set\_hits()}}
+{\footnotesize\ttfamily \label{class_character_base_a929186b85729a9affe5521cd8574fda9} 
+void Character\+Base::\+set\+\_\+hits (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{hits}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the characters hits. Clamped to {\ttfamily max\+\_\+hits}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hits} & Character\textquotesingle{}s new {\ttfamily hits} value. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{d7/ddd/class_character_base_a929186b85729a9affe5521cd8574fda9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a1b3540ec283cd09357da45e75cd7234b}\index{CharacterBase@{CharacterBase}!set\_invincibility@{set\_invincibility}}
+\index{set\_invincibility@{set\_invincibility}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{set\_invincibility()}{set\_invincibility()}}
+{\footnotesize\ttfamily \label{class_character_base_a1b3540ec283cd09357da45e75cd7234b} 
+void Character\+Base::\+set\+\_\+invincibility (\begin{DoxyParamCaption}\item[{bool}]{invincible}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set character\textquotesingle{}s invincibility flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em invincible} & New invincibility flag value. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_a1b3540ec283cd09357da45e75cd7234b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a545a33a204214215778708845b4e1356}\index{CharacterBase@{CharacterBase}!set\_knockback\_factor@{set\_knockback\_factor}}
+\index{set\_knockback\_factor@{set\_knockback\_factor}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{set\_knockback\_factor()}{set\_knockback\_factor()}}
+{\footnotesize\ttfamily \label{class_character_base_a545a33a204214215778708845b4e1356} 
+void Character\+Base::\+set\+\_\+knockback\+\_\+factor (\begin{DoxyParamCaption}\item[{float}]{knockback\+\_\+factor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get character\textquotesingle{}s knockback factor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em knockback\+\_\+factor} & New knockback factor. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_a545a33a204214215778708845b4e1356_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a6016eb0cd8f8bc67652e102bc2793f8f}\index{CharacterBase@{CharacterBase}!set\_max\_hits@{set\_max\_hits}}
+\index{set\_max\_hits@{set\_max\_hits}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{set\_max\_hits()}{set\_max\_hits()}}
+{\footnotesize\ttfamily \label{class_character_base_a6016eb0cd8f8bc67652e102bc2793f8f} 
+void Character\+Base::\+set\+\_\+max\+\_\+hits (\begin{DoxyParamCaption}\item[{int8\+\_\+t}]{max\+\_\+hits}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the maximum number of hits the character can take before it dies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+\_\+hits} & Character\textquotesingle{}s new {\ttfamily max\+\_\+hits} value. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{d7/ddd/class_character_base_a6016eb0cd8f8bc67652e102bc2793f8f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_character_base_a723694fc956344660bc883767fde2127}\index{CharacterBase@{CharacterBase}!shoot@{shoot}}
+\index{shoot@{shoot}!CharacterBase@{CharacterBase}}
+\doxysubsubsection{\texorpdfstring{shoot()}{shoot()}}
+{\footnotesize\ttfamily \label{class_character_base_a723694fc956344660bc883767fde2127} 
+void Character\+Base::\+shoot (\begin{DoxyParamCaption}\item[{Vector2}]{position}{, }\item[{Vector2}]{direction}{, }\item[{Packed\+Scene \texorpdfstring{$\ast$}{*}}]{projectile\+\_\+type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Spawns a projectile at the specified location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position that the projectile will spawn at. \\
+\hline
+{\em direction} & The direction that the projectile will move in (unit vector). \\
+\hline
+{\em projectile\+\_\+type} & The projectile scene that will spawn. Root must be of type \doxylink{class_projectile}{Projectile} \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/ddd/class_character_base_a723694fc956344660bc883767fde2127_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{d7/ddd/class_character_base_a723694fc956344660bc883767fde2127_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\+characters/\doxymbox{\hyperlink{character__base_8h}{character\+\_\+base.\+h}}\item 
+src/\+characters/\doxymbox{\hyperlink{character__base_8cpp}{character\+\_\+base.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Taken from https://www.geeksforgeeks.org/javascript/how-to-redirect-to-a-relative-url-in-javascript/-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gates of Moloney</title>
+</head>
+
+<body>
+    <h2>Welcome to the gates of Moloney.</h2>
+    <p>If you believe you are ready... click the button below:</p>
+    <button onclick="redirectToRelativeURL()">I <i>think</i> I am ready</button>
+
+    <script>
+        // Function to redirect to a relative URL
+        function redirectToRelativeURL() {
+            // Relative URL to redirect to
+            const relativeURL =
+                'html/';
+            // Construct absolute URL based 
+            // on the current location
+            const absoluteURL =
+                new URL(relativeURL, window.location.href);
+
+            // Log the absolute URL (optional)
+            console.log('Redirecting to:', absoluteURL.href);
+
+            // Redirect to the absolute URL
+            window.location.href = absoluteURL.href;
+        }
+    </script>
+</body>
+
+</html>

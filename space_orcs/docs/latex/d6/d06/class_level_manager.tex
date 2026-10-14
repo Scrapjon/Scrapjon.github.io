@@ -1,0 +1,142 @@
+\doxysection{Level\+Manager Class Reference}
+\hypertarget{class_level_manager}{}\label{class_level_manager}\index{LevelManager@{LevelManager}}
+
+
+Singleton object with the purpose of storing the currently active level. There should only be one active level at any given time. Levels that are not cleaned up are stale by default so keep that in mind.  
+
+
+
+
+{\ttfamily \+\#include $<$level\+\_\+manager.\+h$>$}
+
+
+
+Collaboration diagram for Level\+Manager:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{d0/dcd/class_level_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_level}{Level}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_level_manager_af2cd2af2efb2f9b0b53d504d79025b48}{get\+\_\+active\+\_\+level}} () const
+\item 
+void \doxymbox{\hyperlink{class_level_manager_aadb4fdb85b4db6d84cca36157e730b2b}{set\+\_\+active\+\_\+level}} (\doxymbox{\hyperlink{class_level}{Level}} \texorpdfstring{$\ast$}{*}level)
+\begin{DoxyCompactList}\small\item\em Sets the active level. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_level_manager_a613793a002c40b73691f42e4e2995286}{Level\+Manager}} (const \doxymbox{\hyperlink{class_level_manager}{Level\+Manager}} \&)=delete
+\item 
+\doxymbox{\hyperlink{class_level_manager}{Level\+Manager}} \& \doxymbox{\hyperlink{class_level_manager_a854b61e5bc3d0c8fad49add31e5855c3}{operator=}} (const \doxymbox{\hyperlink{class_level_manager}{Level\+Manager}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \doxymbox{\hyperlink{class_level_manager}{Level\+Manager}} \& \doxymbox{\hyperlink{class_level_manager_a3dfb09fea60076707874b4237002026d}{get\+\_\+instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton object with the purpose of storing the currently active level. There should only be one active level at any given time. Levels that are not cleaned up are stale by default so keep that in mind. 
+
+\label{class_level_manager_doc-constructors}
+\Hypertarget{class_level_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_level_manager_a613793a002c40b73691f42e4e2995286}\index{LevelManager@{LevelManager}!LevelManager@{LevelManager}}
+\index{LevelManager@{LevelManager}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{LevelManager()}{LevelManager()}}
+{\footnotesize\ttfamily \label{class_level_manager_a613793a002c40b73691f42e4e2995286} 
+Level\+Manager::\+\+Level\+Manager (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_level_manager}{Level\+Manager}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{d6/d06/class_level_manager_a613793a002c40b73691f42e4e2995286_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d06/class_level_manager_a613793a002c40b73691f42e4e2995286_icgraph}
+\end{center}
+\end{figure}
+
+
+\label{class_level_manager_doc-func-members}
+\Hypertarget{class_level_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_level_manager_af2cd2af2efb2f9b0b53d504d79025b48}\index{LevelManager@{LevelManager}!get\_active\_level@{get\_active\_level}}
+\index{get\_active\_level@{get\_active\_level}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{get\_active\_level()}{get\_active\_level()}}
+{\footnotesize\ttfamily \label{class_level_manager_af2cd2af2efb2f9b0b53d504d79025b48} 
+\doxymbox{\hyperlink{class_level}{Level}} \texorpdfstring{$\ast$}{*} Level\+Manager::\+get\+\_\+active\+\_\+level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d06/class_level_manager_af2cd2af2efb2f9b0b53d504d79025b48_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_level_manager_a3dfb09fea60076707874b4237002026d}\index{LevelManager@{LevelManager}!get\_instance@{get\_instance}}
+\index{get\_instance@{get\_instance}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{get\_instance()}{get\_instance()}}
+{\footnotesize\ttfamily \label{class_level_manager_a3dfb09fea60076707874b4237002026d} 
+\doxymbox{\hyperlink{class_level_manager}{Level\+Manager}} \& Level\+Manager::\+get\+\_\+instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d06/class_level_manager_a3dfb09fea60076707874b4237002026d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d06/class_level_manager_a3dfb09fea60076707874b4237002026d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_level_manager_a854b61e5bc3d0c8fad49add31e5855c3}\index{LevelManager@{LevelManager}!operator=@{operator=}}
+\index{operator=@{operator=}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{class_level_manager_a854b61e5bc3d0c8fad49add31e5855c3} 
+\doxymbox{\hyperlink{class_level_manager}{Level\+Manager}} \& Level\+Manager::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_level_manager}{Level\+Manager}} \&}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d06/class_level_manager_a854b61e5bc3d0c8fad49add31e5855c3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_level_manager_aadb4fdb85b4db6d84cca36157e730b2b}\index{LevelManager@{LevelManager}!set\_active\_level@{set\_active\_level}}
+\index{set\_active\_level@{set\_active\_level}!LevelManager@{LevelManager}}
+\doxysubsubsection{\texorpdfstring{set\_active\_level()}{set\_active\_level()}}
+{\footnotesize\ttfamily \label{class_level_manager_aadb4fdb85b4db6d84cca36157e730b2b} 
+void Level\+Manager::\+set\+\_\+active\+\_\+level (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_level}{Level}} \texorpdfstring{$\ast$}{*}}]{level}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the active level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & New active level. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/d06/class_level_manager_aadb4fdb85b4db6d84cca36157e730b2b_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+src/\+level/\doxymbox{\hyperlink{level__manager_8h}{level\+\_\+manager.\+h}}\end{DoxyCompactItemize}

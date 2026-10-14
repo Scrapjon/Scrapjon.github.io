@@ -1,0 +1,9 @@
+<map id="initialize_gdextension_types" name="initialize_gdextension_types">
+<area shape="rect" id="Node000001" title=" " alt="" coords="199,47,344,89"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="301,31,291,28,271,25,253,27,242,32,238,38,239,47,234,45,233,37,239,28,252,22,271,20,292,22,306,31"/>
+<area shape="rect" id="Node000002" href="$d3/dfb/register__types_8h.html#a0dbe568b42f8dce3c116accaf8d36af0" title=" " alt="" coords="5,5,151,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,50,151,45,151,40,186,49"/>
+<area shape="rect" id="Node000003" href="$da/d38/register__types_8cpp.html#a602bffa66bf8003506d23cdd0360c9b5" title=" " alt="" coords="36,96,120,123"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="187,86,121,103,120,98,181,87"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="110,81,100,77,78,75,58,77,47,81,44,87,50,96,45,95,39,87,43,78,56,71,78,69,101,72,115,81"/>
+</map>

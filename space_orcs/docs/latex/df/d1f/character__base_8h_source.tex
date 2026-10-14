@@ -1,0 +1,156 @@
+\doxysection{character\+\_\+base.\+h}
+\hypertarget{character__base_8h_source}{}\label{character__base_8h_source}\index{src/characters/character\_base.h@{src/characters/character\_base.h}}
+\doxymbox{\hyperlink{character__base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/character\_body2d.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/packed\_scene.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/wrapped.hpp"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{level_8h}{level/level.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{level__manager_8h}{level/level\_manager.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }godot;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_character_base_ac52af616beade0e3553a8ea54bdefb58}{CharacterBase}}\ :\ \textcolor{keyword}{public}\ CharacterBody2D\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ GDCLASS\ (\doxymbox{\hyperlink{class_character_base_ac52af616beade0e3553a8ea54bdefb58}{CharacterBase}},\ CharacterBody2D)}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ Vector2\ m\_direction\ \ \ \ \ \ \ =\ \{\ 1,\ 0\ \};\ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ Vector2\ m\_shoot\_direction\ =\ m\_direction;\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Max\ number\ of\ hits\ character\ can\ take}}
+\DoxyCodeLine{00019\ \ \ \ \ int8\_t\ m\_max\_hits\ =\ 3;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Hits\ remaining}}
+\DoxyCodeLine{00022\ \ \ \ \ int8\_t\ m\_hits\ =\ m\_max\_hits;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{float}\ m\_knockback\_factor\ =\ 100.f;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_invincible\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_can\_shoot\ \ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_alive\ \ \ \ \ \ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_a522fcc6a1fb73ed04bcb8c7c09e88cff}{\_bind\_methods}}\ ();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{class_character_base_ac52af616beade0e3553a8ea54bdefb58}{CharacterBase}}\ ()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00037\ \ \ \ \ \doxymbox{\hyperlink{class_character_base_acc818ac7acb04ea7bf62421006f193bb}{\string~CharacterBase}}\ ()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{inline}\ Vector2\ \doxymbox{\hyperlink{class_character_base_a5c566524dbb5850104c3d65cec426176}{get\_direction}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00042\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_direction;}
+\DoxyCodeLine{00044\ \ \ \ \ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_a77b7f326d58af4848871e19548292f8f}{set\_direction}}\ (\textcolor{keyword}{const}\ Vector2\ \&direction)}
+\DoxyCodeLine{00051\ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (direction.x\ >\ 0)\ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ m\_shoot\_direction\ =\ Vector2\ (1,\ 0);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (direction.x\ <\ 0)\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ m\_shoot\_direction\ =\ Vector2\ (-\/1,\ 0);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ m\_direction\ =\ direction;}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_character_base_a643ab79de31c1d79cea733b3db57c3d7}{get\_can\_shoot}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00064\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_can\_shoot;}
+\DoxyCodeLine{00066\ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_a93e7fab7d95e7e160f12a6ea196513c3}{set\_can\_shoot}}\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{bool}\ can\_shoot)}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ m\_can\_shoot\ =\ can\_shoot;}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_a723694fc956344660bc883767fde2127}{shoot}}\ (Vector2\ position,\ Vector2\ direction,\ PackedScene\ *projectile\_type);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{inline}\ Vector2\ \doxymbox{\hyperlink{class_character_base_acd63b99023b5d71520f8614b0a8513f0}{get\_shoot\_direction}}\ ()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keyword}{inline}\ int8\_t\ \doxymbox{\hyperlink{class_character_base_aea376c490089ebf45ed6eeff51a255dd}{get\_hits}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00091\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_hits;}
+\DoxyCodeLine{00093\ \ \ \ \ \}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_a929186b85729a9affe5521cd8574fda9}{set\_hits}}\ (int8\_t\ hits)}
+\DoxyCodeLine{00098\ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ m\_hits\ =\ std::min\ (hits,\ m\_max\_hits);}
+\DoxyCodeLine{00100\ \ \ \ \ \}}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keyword}{inline}\ int8\_t\ \doxymbox{\hyperlink{class_character_base_ae9d3beb11b6c06ca6db6c1b7b809c4d6}{get\_max\_hits}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00105\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_max\_hits;}
+\DoxyCodeLine{00107\ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_a6016eb0cd8f8bc67652e102bc2793f8f}{set\_max\_hits}}\ (int8\_t\ max\_hits)}
+\DoxyCodeLine{00112\ \ \ \ \ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ m\_max\_hits\ =\ max\_hits;}
+\DoxyCodeLine{00114\ \ \ \ \ \}}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_character_base_acff0812bf8abccf510b510aed7e4eb51}{is\_invincible}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00119\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_invincible;}
+\DoxyCodeLine{00121\ \ \ \ \ \}}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_a1b3540ec283cd09357da45e75cd7234b}{set\_invincibility}}\ (\textcolor{keywordtype}{bool}\ invincible)}
+\DoxyCodeLine{00126\ \ \ \ \ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ m\_invincible\ =\ invincible;}
+\DoxyCodeLine{00128\ \ \ \ \ \}}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_character_base_a3a80f7f9ce1456f99bf541b57015b2c2}{get\_knockback\_factor}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00133\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_knockback\_factor;}
+\DoxyCodeLine{00135\ \ \ \ \ \}}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_a545a33a204214215778708845b4e1356}{set\_knockback\_factor}}\ (\textcolor{keywordtype}{float}\ knockback\_factor)}
+\DoxyCodeLine{00140\ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ m\_knockback\_factor\ =\ knockback\_factor;}
+\DoxyCodeLine{00142\ \ \ \ \ \}}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{comment}{//}}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_ad2fed49dcc335194d8295abbf35ce85d}{apply\_knockback}}\ (Vector2\ knockback\_direction)}
+\DoxyCodeLine{00149\ \ \ \ \ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ Vector2\ velocity\ \ \ \ \ =\ get\_velocity\ ();}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ Vector2\ \ \ \ \ \ \ new\_velocity\ =\ velocity\ +\ (knockback\_direction\ *\ m\_knockback\_factor);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ print\_line\ (\textcolor{stringliteral}{"{}knockback!"{}},\ velocity,\ new\_velocity);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ set\_velocity\ (new\_velocity);}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00158\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_a80891ca6fa81f2fece380765a13c7326}{hit}}\ (Vector2\ global\_hit\_position)}
+\DoxyCodeLine{00159\ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_invincible)}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ emit\_signal\ (\textcolor{stringliteral}{"{}character\_hit"{}});}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ Vector2\ knockback\_direction\ =\ get\_global\_position\ ()\ -\/\ global\_hit\_position;}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ knockback\_direction.normalize\ ();}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_character_base_ad2fed49dcc335194d8295abbf35ce85d}{apply\_knockback}}\ (knockback\_direction);}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ print\_line\ (\textcolor{stringliteral}{"{}Ow!"{}});}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ m\_hits\ =\ std::max\ ((m\_hits\ -\/\ 1),\ 0);}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_hits\ <=\ 0)\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_character_base_afa876bb8c666f546eab3d8e15f061c1e}{kill}}\ ();}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_character_base_afa876bb8c666f546eab3d8e15f061c1e}{kill}}\ ()}
+\DoxyCodeLine{00178\ \ \ \ \ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ print\_line\ (\textcolor{stringliteral}{"{}Dead!"{}});}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ m\_alive\ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ m\_can\_shoot\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_hits\ !=\ 0)}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ m\_hits\ =\ 0;}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ emit\_signal\ (\textcolor{stringliteral}{"{}character\_death"{}},\ \textcolor{keyword}{this});\ \textcolor{comment}{//\ Leave\ it\ up\ to\ character\ to\ implement\ destruction}}
+\DoxyCodeLine{00185\ \ \ \ \ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00189\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_character_base_abb404fe758a1bf7b5ee2c208ffd1edb2}{is\_alive}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00190\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_alive;}
+\DoxyCodeLine{00192\ \ \ \ \ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keyword}{inline}\ \doxymbox{\hyperlink{class_level}{Level}}\ *\doxymbox{\hyperlink{class_character_base_a05ab2133dc321ba0f5625df36d8b73ae}{get\_level}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00197\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_level_manager}{LevelManager}}\ \&level\_manager\ =\ \doxymbox{\hyperlink{class_level_manager_a3dfb09fea60076707874b4237002026d}{LevelManager::get\_instance}}\ ();}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ level\_manager.\doxymbox{\hyperlink{class_level_manager_af2cd2af2efb2f9b0b53d504d79025b48}{get\_active\_level}}\ ();}
+\DoxyCodeLine{00200\ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \};}
+
+\end{DoxyCode}

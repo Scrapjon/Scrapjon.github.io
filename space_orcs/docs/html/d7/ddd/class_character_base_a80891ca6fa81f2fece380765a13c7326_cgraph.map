@@ -1,0 +1,7 @@
+<map id="CharacterBase::hit" name="CharacterBase::hit">
+<area shape="rect" id="Node000001" title="Sole method of dealing damage to characters. Decrements character&#39;s hits by 1." alt="" coords="5,43,136,69"/>
+<area shape="rect" id="Node000002" href="$d7/ddd/class_character_base.html#ad2fed49dcc335194d8295abbf35ce85d" title="Applys knockback in direction of the provided knockback direction." alt="" coords="184,5,331,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,43,171,40,166,41,137,48"/>
+<area shape="rect" id="Node000003" href="$d7/ddd/class_character_base.html#afa876bb8c666f546eab3d8e15f061c1e" title="Sets character to &#39;dead&#39;, disables shooting and calls the &#39;character death&#39; signal...." alt="" coords="191,72,324,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,64,179,72,173,73,136,69"/>
+</map>

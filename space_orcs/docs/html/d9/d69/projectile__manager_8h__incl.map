@@ -1,0 +1,15 @@
+<map id="src/projectiles/projectile_manager.h" name="src/projectiles/projectile_manager.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="306,5,464,48"/>
+<area shape="rect" id="Node000002" href="$dc/dd4/level__manager_8h.html" title=" " alt="" coords="11,104,159,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="314,51,143,102,142,97,316,46"/>
+<area shape="rect" id="Node000004" href="$da/dc2/bind_8h.html" title=" " alt="" coords="183,104,267,131"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="350,47,262,98,260,94,345,50"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="291,104,479,131"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="387,46,387,90,383,87,383,51"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="502,96,678,139"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="433,46,531,89,525,90,433,51"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="702,104,910,131"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="465,42,734,99,729,101,465,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,187,165,229"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,129,88,172,82,170,83,133"/>
+</map>

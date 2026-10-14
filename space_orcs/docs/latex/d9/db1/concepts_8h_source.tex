@@ -1,0 +1,13 @@
+\doxysection{concepts.\+h}
+\hypertarget{concepts_8h_source}{}\label{concepts_8h_source}\index{src/utils/concepts.h@{src/utils/concepts.h}}
+\doxymbox{\hyperlink{concepts_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/object.hpp"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <concepts>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <type\_traits>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00007\ \textcolor{keyword}{concept\ }\doxymbox{\hyperlink{concept_g_d_object}{GDObject}}\ =\ std::is\_base\_of\_v<godot::Object,\ T>;}
+
+\end{DoxyCode}

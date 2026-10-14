@@ -1,0 +1,42 @@
+\doxysection{level\+\_\+manager.\+h}
+\hypertarget{level__manager_8h_source}{}\label{level__manager_8h_source}\index{src/level/level\_manager.h@{src/level/level\_manager.h}}
+\doxymbox{\hyperlink{level__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/variant/utility\_functions.hpp"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ namespace\ }godot;}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_level}{Level}};}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_level_manager_a613793a002c40b73691f42e4e2995286}{LevelManager}}\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_level_manager_a613793a002c40b73691f42e4e2995286}{LevelManager}}\ \&\doxymbox{\hyperlink{class_level_manager_a3dfb09fea60076707874b4237002026d}{get\_instance}}\ ()}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{class_level_manager_a613793a002c40b73691f42e4e2995286}{LevelManager}}\ instance;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ instance;}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{class_level}{Level}}\ *\doxymbox{\hyperlink{class_level_manager_af2cd2af2efb2f9b0b53d504d79025b48}{get\_active\_level}}\ ()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!m\_active\_level)}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ UtilityFunctions::push\_error\ (\textcolor{stringliteral}{"{}Call\ to\ get\_active\_level\ with\ null\ level."{}});}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ m\_active\_level;}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_level_manager_aadb4fdb85b4db6d84cca36157e730b2b}{set\_active\_level}}\ (\doxymbox{\hyperlink{class_level}{Level}}\ *level)}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ m\_active\_level\ =\ level;}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{class_level_manager_a613793a002c40b73691f42e4e2995286}{LevelManager}}\ (\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_level_manager_a613793a002c40b73691f42e4e2995286}{LevelManager}}\ \&)\ \ \ \ \ \ \ \ \ \ \ \ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{class_level_manager_a613793a002c40b73691f42e4e2995286}{LevelManager}}\ \&\doxymbox{\hyperlink{class_level_manager_a854b61e5bc3d0c8fad49add31e5855c3}{operator=\ }}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_level_manager_a613793a002c40b73691f42e4e2995286}{LevelManager}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \doxymbox{\hyperlink{class_level}{Level}}\ *m\_active\_level\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00040\ \ \ \ \ \doxymbox{\hyperlink{class_level_manager_a613793a002c40b73691f42e4e2995286}{LevelManager}}\ ()}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \};}
+
+\end{DoxyCode}

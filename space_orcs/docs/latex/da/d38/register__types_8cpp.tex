@@ -1,0 +1,96 @@
+\doxysection{src/\+register\+\_\+types.cpp File Reference}
+\hypertarget{register__types_8cpp}{}\label{register__types_8cpp}\index{src/register\_types.cpp@{src/register\_types.cpp}}
+{\ttfamily \+\#include "{}register\+\_\+types.\+h"{}}\newline
+{\ttfamily \+\#include $<$gdextension\+\_\+interface.\+h$>$}\newline
+{\ttfamily \+\#include $<$godot\+\_\+cpp/\+core/\+class\+\_\+db.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$godot\+\_\+cpp/\+core/\+defs.\+hpp$>$}\newline
+{\ttfamily \+\#include $<$godot\+\_\+cpp/\+godot.\+hpp$>$}\newline
+{\ttfamily \+\#include "{}benchmarking/\+benchmarker.\+h"{}}\newline
+{\ttfamily \+\#include "{}characters/\+character\+\_\+base.\+h"{}}\newline
+{\ttfamily \+\#include "{}example\+\_\+class.\+h"{}}\newline
+{\ttfamily \+\#include "{}level/\+level.\+h"{}}\newline
+{\ttfamily \+\#include "{}level/\+level\+\_\+container.\+h"{}}\newline
+{\ttfamily \+\#include "{}menu/\+title\+\_\+label.\+h"{}}\newline
+{\ttfamily \+\#include "{}projectiles/\+projectile.\+h"{}}\newline
+{\ttfamily \+\#include "{}projectiles/\+projectile\+\_\+manager.\+h"{}}\newline
+Include dependency graph for register\+\_\+types.\+cpp:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dc/df8/register__types_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{register__types_8cpp_a255d342579f94daebe1aed800a04b561}{initialize\+\_\+gdextension\+\_\+types}} (Module\+Initialization\+Level p\+\_\+level)
+\item 
+void \doxymbox{\hyperlink{register__types_8cpp_a59d93913b6099be6b0b57408d3c6420b}{uninitialize\+\_\+gdextension\+\_\+types}} (Module\+Initialization\+Level p\+\_\+level)
+\item 
+GDExtension\+Bool GDE\+\_\+\+EXPORT \doxymbox{\hyperlink{register__types_8cpp_a602bffa66bf8003506d23cdd0360c9b5}{Orc\+Lib\+\_\+init}} (GDExtension\+Interface\+Get\+Proc\+Address p\+\_\+get\+\_\+proc\+\_\+address, GDExtension\+Class\+Library\+Ptr p\+\_\+library, GDExtension\+Initialization \texorpdfstring{$\ast$}{*}r\+\_\+initialization)
+\end{DoxyCompactItemize}
+
+
+\label{register__types_8cpp_doc-func-members}
+\Hypertarget{register__types_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{register__types_8cpp_a255d342579f94daebe1aed800a04b561}\index{register\_types.cpp@{register\_types.cpp}!initialize\_gdextension\_types@{initialize\_gdextension\_types}}
+\index{initialize\_gdextension\_types@{initialize\_gdextension\_types}!register\_types.cpp@{register\_types.cpp}}
+\doxysubsubsection{\texorpdfstring{initialize\_gdextension\_types()}{initialize\_gdextension\_types()}}
+{\footnotesize\ttfamily \label{register__types_8cpp_a255d342579f94daebe1aed800a04b561} 
+void initialize\+\_\+gdextension\+\_\+types (\begin{DoxyParamCaption}\item[{Module\+Initialization\+Level}]{p\+\_\+level}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{da/d38/register__types_8cpp_a255d342579f94daebe1aed800a04b561_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{da/d38/register__types_8cpp_a255d342579f94daebe1aed800a04b561_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{register__types_8cpp_a602bffa66bf8003506d23cdd0360c9b5}\index{register\_types.cpp@{register\_types.cpp}!OrcLib\_init@{OrcLib\_init}}
+\index{OrcLib\_init@{OrcLib\_init}!register\_types.cpp@{register\_types.cpp}}
+\doxysubsubsection{\texorpdfstring{OrcLib\_init()}{OrcLib\_init()}}
+{\footnotesize\ttfamily \label{register__types_8cpp_a602bffa66bf8003506d23cdd0360c9b5} 
+GDExtension\+Bool GDE\+\_\+\+EXPORT Orc\+Lib\+\_\+init (\begin{DoxyParamCaption}\item[{GDExtension\+Interface\+Get\+Proc\+Address}]{p\+\_\+get\+\_\+proc\+\_\+address}{, }\item[{GDExtension\+Class\+Library\+Ptr}]{p\+\_\+library}{, }\item[{GDExtension\+Initialization \texorpdfstring{$\ast$}{*}}]{r\+\_\+initialization}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{da/d38/register__types_8cpp_a602bffa66bf8003506d23cdd0360c9b5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=143pt]{da/d38/register__types_8cpp_a602bffa66bf8003506d23cdd0360c9b5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{register__types_8cpp_a59d93913b6099be6b0b57408d3c6420b}\index{register\_types.cpp@{register\_types.cpp}!uninitialize\_gdextension\_types@{uninitialize\_gdextension\_types}}
+\index{uninitialize\_gdextension\_types@{uninitialize\_gdextension\_types}!register\_types.cpp@{register\_types.cpp}}
+\doxysubsubsection{\texorpdfstring{uninitialize\_gdextension\_types()}{uninitialize\_gdextension\_types()}}
+{\footnotesize\ttfamily \label{register__types_8cpp_a59d93913b6099be6b0b57408d3c6420b} 
+void uninitialize\+\_\+gdextension\+\_\+types (\begin{DoxyParamCaption}\item[{Module\+Initialization\+Level}]{p\+\_\+level}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{da/d38/register__types_8cpp_a59d93913b6099be6b0b57408d3c6420b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d38/register__types_8cpp_a59d93913b6099be6b0b57408d3c6420b_icgraph}
+\end{center}
+\end{figure}

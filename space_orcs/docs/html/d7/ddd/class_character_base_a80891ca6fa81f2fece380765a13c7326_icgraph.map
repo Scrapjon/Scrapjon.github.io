@@ -1,0 +1,5 @@
+<map id="CharacterBase::hit" name="CharacterBase::hit">
+<area shape="rect" id="Node000001" title="Sole method of dealing damage to characters. Decrements character&#39;s hits by 1." alt="" coords="201,13,331,40"/>
+<area shape="rect" id="Node000002" href="$d7/ddd/class_character_base.html#a522fcc6a1fb73ed04bcb8c7c09e88cff" title=" " alt="" coords="5,5,153,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="182,27,153,29,153,24,188,26"/>
+</map>

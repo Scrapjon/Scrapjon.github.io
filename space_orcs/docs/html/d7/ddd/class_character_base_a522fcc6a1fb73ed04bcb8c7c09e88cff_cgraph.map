@@ -1,0 +1,54 @@
+<map id="CharacterBase::_bind_methods" name="CharacterBase::_bind_methods">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,532,153,575"/>
+<area shape="rect" id="Node000002" href="$d7/ddd/class_character_base.html#ad2fed49dcc335194d8295abbf35ce85d" title="Applys knockback in direction of the provided knockback direction." alt="" coords="454,15,602,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,532,91,429,113,282,129,207,148,140,172,85,185,64,199,49,225,31,255,18,285,10,317,5,381,4,441,13,437,15,381,9,318,10,286,15,256,23,228,36,202,53,189,68,176,88,153,141,134,209,118,283,96,429,85,533"/>
+<area shape="rect" id="Node000003" href="$d7/ddd/class_character_base.html#a643ab79de31c1d79cea733b3db57c3d7" title="Gets the can_shoot flag." alt="" coords="227,164,362,207"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="79,532,87,471,107,387,122,341,142,297,168,255,199,217,215,206,212,211,203,221,172,258,147,299,127,343,112,388,93,472,85,532"/>
+<area shape="rect" id="Node000004" href="$d7/ddd/class_character_base.html#a5c566524dbb5850104c3d65cec426176" title="Gets the direction that the character is facing." alt="" coords="227,231,362,274"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="82,531,93,481,115,415,150,345,172,313,199,284,215,274,212,278,202,288,177,316,154,348,120,417,98,483,87,532"/>
+<area shape="rect" id="Node000005" href="$d7/ddd/class_character_base.html#aea376c490089ebf45ed6eeff51a255dd" title="Gets the number of remaining hits a character has before it dies." alt="" coords="213,298,376,324"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="84,531,98,489,121,436,154,381,175,356,199,334,208,330,205,334,202,338,179,360,159,384,126,438,103,491,89,532"/>
+<area shape="rect" id="Node000006" href="$d7/ddd/class_character_base.html#a3a80f7f9ce1456f99bf541b57015b2c2" title="Get character&#39;s knockback factor." alt="" coords="227,348,362,391"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="90,531,133,467,164,432,199,401,215,393,212,397,202,405,167,435,137,470,95,533"/>
+<area shape="rect" id="Node000007" href="$d7/ddd/class_character_base.html#a05ab2133dc321ba0f5625df36d8b73ae" title="Gets the active level from the level manager." alt="" coords="227,415,362,458"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="105,530,148,498,199,467,214,462,211,466,202,472,151,503,109,533"/>
+<area shape="rect" id="Node000011" href="$d7/ddd/class_character_base.html#ae9d3beb11b6c06ca6db6c1b7b809c4d6" title="Gets the maximum number of hits the character can take before it dies." alt="" coords="227,532,362,575"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="151,551,214,552,210,555,154,556"/>
+<area shape="rect" id="Node000012" href="$d7/ddd/class_character_base.html#acd63b99023b5d71520f8614b0a8513f0" title="Gets the shooting direction for the character. Uses a cached direction value so that the character sh..." alt="" coords="227,599,362,642"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="149,573,214,594,210,596,151,578"/>
+<area shape="rect" id="Node000013" href="$d7/ddd/class_character_base.html#a80891ca6fa81f2fece380765a13c7326" title="Sole method of dealing damage to characters. Decrements character&#39;s hits by 1." alt="" coords="229,63,360,90"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="77,532,79,453,84,399,93,340,108,278,130,216,160,158,199,107,217,94,214,99,203,110,164,161,135,218,113,279,98,341,89,400,84,453,82,532"/>
+<area shape="rect" id="Node000014" href="$d7/ddd/class_character_base.html#afa876bb8c666f546eab3d8e15f061c1e" title="Sets character to &#39;dead&#39;, disables shooting and calls the &#39;character death&#39; signal...." alt="" coords="462,92,594,119"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="77,532,79,458,84,408,93,354,108,298,130,244,160,193,199,150,217,139,242,130,305,117,377,109,448,106,444,109,378,114,306,122,243,135,219,144,202,154,164,197,134,246,113,300,98,355,89,409,84,458,82,532"/>
+<area shape="rect" id="Node000015" href="$d7/ddd/class_character_base.html#abb404fe758a1bf7b5ee2c208ffd1edb2" title="Is character alive?" alt="" coords="214,666,374,692"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="100,573,146,613,202,651,217,659,212,661,199,656,143,618,102,578"/>
+<area shape="rect" id="Node000016" href="$d7/ddd/class_character_base.html#acff0812bf8abccf510b510aed7e4eb51" title="Get character&#39;s invincibility flag." alt="" coords="201,716,388,743"/>
+<area shape="poly" id="edge17_Node000001_Node000016" title=" " alt="" coords="91,573,136,638,166,673,202,702,212,709,207,710,199,707,163,677,132,641,92,578"/>
+<area shape="rect" id="Node000017" href="$d7/ddd/class_character_base.html#a93e7fab7d95e7e160f12a6ea196513c3" title="Sets the character&#39;s can_shoot flag." alt="" coords="227,767,362,810"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="87,573,105,612,129,660,162,710,202,753,216,763,211,765,199,757,157,713,125,663,101,615,88,578"/>
+<area shape="rect" id="Node000018" href="$d7/ddd/class_character_base.html#a77b7f326d58af4848871e19548292f8f" title="Sets the direction of the character. Updates the shoot direction cache as well." alt="" coords="227,834,362,876"/>
+<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="84,573,98,625,120,690,154,759,177,791,202,820,216,831,211,832,199,824,172,795,150,762,115,692,93,626,84,578"/>
+<area shape="rect" id="Node000019" href="$d7/ddd/class_character_base.html#a929186b85729a9affe5521cd8574fda9" title="Sets the characters hits. Clamped to max_hits." alt="" coords="213,900,376,927"/>
+<area shape="poly" id="edge21_Node000001_Node000019" title=" " alt="" coords="82,573,91,637,110,721,125,766,145,810,171,851,203,886,208,892,202,892,199,890,167,854,141,812,120,768,105,722,86,637,81,578"/>
+<area shape="rect" id="Node000020" href="$d7/ddd/class_character_base.html#a1b3540ec283cd09357da45e75cd7234b" title="Set character&#39;s invincibility flag." alt="" coords="227,951,362,994"/>
+<area shape="poly" id="edge22_Node000001_Node000020" title=" " alt="" coords="81,573,89,644,106,741,121,793,142,845,168,894,203,937,216,950,211,950,199,941,164,897,137,847,116,795,101,742,83,645,81,578"/>
+<area shape="rect" id="Node000021" href="$d7/ddd/class_character_base.html#a545a33a204214215778708845b4e1356" title="Get character&#39;s knockback factor." alt="" coords="227,1018,362,1060"/>
+<area shape="poly" id="edge23_Node000001_Node000021" title=" " alt="" coords="80,573,84,655,89,709,98,769,113,831,134,893,164,952,203,1004,216,1017,211,1017,199,1008,159,955,129,895,108,833,93,770,83,709,79,655,79,578"/>
+<area shape="rect" id="Node000022" href="$d7/ddd/class_character_base.html#a6016eb0cd8f8bc67652e102bc2793f8f" title="Sets the maximum number of hits the character can take before it dies." alt="" coords="227,1084,362,1127"/>
+<area shape="poly" id="edge24_Node000001_Node000022" title=" " alt="" coords="83,573,98,679,122,828,139,904,157,974,179,1031,203,1071,216,1084,211,1083,199,1074,174,1034,152,976,133,905,117,829,93,680,82,578"/>
+<area shape="rect" id="Node000023" href="$d7/ddd/class_character_base.html#a723694fc956344660bc883767fde2127" title="Spawns a projectile at the specified location." alt="" coords="220,482,368,508"/>
+<area shape="poly" id="edge25_Node000001_Node000023" title=" " alt="" coords="151,532,200,518,230,511,226,515,201,523,155,536"/>
+<area shape="rect" id="Node000008" href="$d6/d06/class_level_manager.html#af2cd2af2efb2f9b0b53d504d79025b48" title=" " alt="" coords="443,474,613,516"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="361,451,430,469,426,471,363,456"/>
+<area shape="rect" id="Node000009" href="$d6/d06/class_level_manager.html#a3dfb09fea60076707874b4237002026d" title=" " alt="" coords="436,423,620,450"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="361,434,423,435,418,438,363,439"/>
+<area shape="rect" id="Node000010" href="$d6/d06/class_level_manager.html#a613793a002c40b73691f42e4e2995286" title=" " alt="" coords="668,423,860,450"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="620,434,655,435,651,437,622,439"/>
+<area shape="poly" id="edge10_Node000010_Node000010" title=" " alt="" coords="724,422,717,414,722,404,738,398,764,396,793,399,809,408,803,409,791,404,764,402,739,404,726,408,723,414,729,423"/>
+<area shape="poly" id="edge14_Node000013_Node000002" title=" " alt="" coords="358,63,441,50,437,53,362,67"/>
+<area shape="poly" id="edge15_Node000013_Node000014" title=" " alt="" coords="359,82,449,94,444,97,361,87"/>
+<area shape="poly" id="edge26_Node000023_Node000008" title=" " alt="" coords="368,493,430,494,425,496,370,497"/>
+<area shape="poly" id="edge27_Node000023_Node000009" title=" " alt="" coords="349,479,459,452,455,456,352,483"/>
+<area shape="rect" id="Node000024" href="$d4/d9a/class_level.html#af788d8452b4fdd1f9df16cd1435df89f" title=" " alt="" coords="460,540,597,583"/>
+<area shape="poly" id="edge28_Node000023_Node000024" title=" " alt="" coords="346,506,389,518,447,536,442,538,387,523,348,511"/>
+</map>

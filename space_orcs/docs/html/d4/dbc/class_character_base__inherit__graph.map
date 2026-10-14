@@ -1,0 +1,5 @@
+<map id="CharacterBase" name="CharacterBase">
+<area shape="rect" id="Node000001" title="The base character class for Space Orcs." alt="" coords="5,123,150,427"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="20,5,135,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,87,80,123,75,123,77,92"/>
+</map>

@@ -1,0 +1,35 @@
+\doxysection{benchmarker.\+h}
+\hypertarget{benchmarker_8h_source}{}\label{benchmarker_8h_source}\index{src/benchmarking/benchmarker.h@{src/benchmarking/benchmarker.h}}
+\doxymbox{\hyperlink{benchmarker_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/ref\_counted.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}godot\_cpp/classes/wrapped.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }godot;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_benchmarker_acf4c5dca10e180a8c450ae89ae6402fb}{Benchmarker}}\ :\ \textcolor{keyword}{public}\ RefCounted\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ GDCLASS\ (\doxymbox{\hyperlink{class_benchmarker_acf4c5dca10e180a8c450ae89ae6402fb}{Benchmarker}},\ RefCounted)}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ m\_timer\_start\_point;}
+\DoxyCodeLine{00015\ \ \ \ \ std::chrono::high\_resolution\_clock::time\_point\ m\_timer\_end\_point;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_benchmarker_a81db389bb92dfddf5821390b0df16b63}{\_bind\_methods}}\ ();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{class_benchmarker_acf4c5dca10e180a8c450ae89ae6402fb}{Benchmarker}}\ ()\ \ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_benchmarker_a38eac471c38f46a938b5c754c472da45}{\string~Benchmarker}}\ ()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_benchmarker_ad773a248fa02cc3a944933ea1771a27d}{start\_timer}}\ ();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_benchmarker_a45dc6abede95a38dd4d0a7c605817307}{end\_timer}}\ ();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{class_benchmarker_a8eaf324c07d8ce7b751d3ef40eb30113}{get\_timer\_duration\_nanoseconds}}\ ();}
+\DoxyCodeLine{00029\ \};}
+
+\end{DoxyCode}

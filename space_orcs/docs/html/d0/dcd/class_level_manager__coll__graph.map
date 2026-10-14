@@ -1,0 +1,3 @@
+<map id="LevelManager" name="LevelManager">
+<area shape="rect" id="Node000001" title="Singleton object with the purpose of storing the currently active level. There should only be one act..." alt="" coords="5,5,131,160"/>
+</map>

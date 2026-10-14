@@ -1,0 +1,12 @@
+<map id="CharacterBase::shoot" name="CharacterBase::shoot">
+<area shape="rect" id="Node000001" title="Spawns a projectile at the specified location." alt="" coords="5,72,154,99"/>
+<area shape="rect" id="Node000002" href="$d6/d06/class_level_manager.html#af2cd2af2efb2f9b0b53d504d79025b48" title=" " alt="" coords="209,5,379,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,69,201,51,197,54,132,74"/>
+<area shape="rect" id="Node000003" href="$d6/d06/class_level_manager.html#a3dfb09fea60076707874b4237002026d" title=" " alt="" coords="202,72,386,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,83,189,85,184,86,155,88"/>
+<area shape="rect" id="Node000005" href="$d4/d9a/class_level.html#af788d8452b4fdd1f9df16cd1435df89f" title=" " alt="" coords="225,123,362,165"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="131,97,213,120,208,122,131,102"/>
+<area shape="rect" id="Node000004" href="$d6/d06/class_level_manager.html#a613793a002c40b73691f42e4e2995286" title=" " alt="" coords="434,72,625,99"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="386,83,421,85,416,86,387,88"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="490,71,483,63,488,53,504,47,530,45,558,48,574,57,569,57,557,53,530,51,505,53,491,57,488,63,495,72"/>
+</map>

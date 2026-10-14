@@ -1,0 +1,16 @@
+\doxysection{cast.\+h}
+\hypertarget{cast_8h_source}{}\label{cast_8h_source}\index{src/utils/cast.h@{src/utils/cast.h}}
+\doxymbox{\hyperlink{cast_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{concepts_8h}{utils/concepts.h}}"{}}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{template}\ <GDObject\ \_To,\ GDObject\ \_From>}
+\DoxyCodeLine{00005\ \textcolor{keyword}{inline}\ \_To\ *\doxymbox{\hyperlink{cast_8h_a009bb655ee72c58da6e0c946fbdb803b}{gdcast}}\ (\_From\ *\textcolor{keywordtype}{object})}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ based\ on:\ https://github.com/vorlac/godot-\/roguelite/blob/main/src/util/conversions.hpp}}
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{auto}\ ret\ =\ \{\ godot::Object::cast\_to<\_To>\ (\textcolor{keywordtype}{object})\ \};}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{return}\ ret;}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
